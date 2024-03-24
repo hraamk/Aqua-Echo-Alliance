@@ -1,65 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Background with Parallax Effect</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Three Columns with Photos</title>
+<style>
+    /* Basic styling */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .column {
+        flex: 1;
+        padding: 20px;
+    }
+    /* Adjust column width for larger screens */
+    @media (min-width: 768px) {
+        .column {
+            flex-basis: 33.33%;
         }
-
-        .video-background {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            height: 100vh; /* Adjust as needed */
-            background: #000; /* Fallback color */
-        }
-
-        .video-background video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1;
-        }
-
-        .content {
-            position: relative;
-            z-index: 1; /* Ensure content is above the video */
-            color: #fff; /* Example text color */
-            text-align: center; /* Example alignment */
-            padding: 20px;
-            margin-top: 500px; /* Add margin to simulate scrolling content */
-        }
-    </style>
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
 </head>
 <body>
-    <div class="video-background">
-        <video autoplay muted loop id="bg-video">
-            <source src="bgvideo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="content">
-            <h1>Welcome to Our Website</h1>
-            <p>This is some example content over the video background.</p>
-        </div>
-    </div>
 
-    <script>
-        // Adjust video position based on scroll
-        window.addEventListener('scroll', function() {
-            const video = document.getElementById('bg-video');
-            const scrollPosition = window.pageYOffset;
-            video.style.top = scrollPosition * 0.5 + 'px'; // Adjust the multiplier as needed
-        });
-    </script>
+<div class="container">
+    <!-- First column -->
+    <div class="column">
+        <img src="photo1.jpg" alt="Photo 1">
+        <p>Text content for column 1 goes here.</p>
+    </div>
+    <!-- Second column -->
+    <div class="column">
+        <img src="photo2.jpg" alt="Photo 2">
+    </div>
+    <!-- Third column -->
+    <div class="column">
+        <img src="photo3.jpg" alt="Photo 3">
+        <p>Text content for column 3 goes here.</p>
+    </div>
+</div>
+
 </body>
 </html>

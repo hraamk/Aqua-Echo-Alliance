@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('SplashBackground.jpg');
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .splash-screen {
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 3em;
+  }
+  
+  .mission {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .group-members {
+    margin-bottom: 20px;
+  }
+  
+  .loader {
+    border: 6px solid #fff;
+    border-top: 6px solid #1e4d5e; /* Lighter blue for animation */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
