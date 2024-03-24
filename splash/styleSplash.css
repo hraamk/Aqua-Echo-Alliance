@@ -9,6 +9,9 @@ body {
     align-items: center;
     height: 100vh;
   }
+  ul{
+    list-style-type: none;
+  }
   
   .splash-screen {
     text-align: center;
