@@ -1,7 +1,23 @@
-.container {
+.form {
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
+    text-align: center;
+}
+
+.rating{
+    align-items: center;
+}
+
+.rating label{
+    margin-right: 20px;
+}
+
+.radios{
+    align-items: center;
+}
+
+input[type="radio"] {
+    margin-right: 18px; /* Adjust the margin value as needed */
 }
 
 .form-group {
