@@ -11,11 +11,11 @@ body{
 
 .container{
     position: absolute;
-    margin-top: 255px;
-    margin-left: 600px;
+    margin-top: 20%;
+    margin-left: 50%;
     transform: translate(-50%, -50%);
-    width: 1000px;
-    height: 500px;
+    width: 70%;
+    height: 85vh;
     background: #f5f5f5;
 
 }
