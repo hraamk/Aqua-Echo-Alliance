@@ -12,10 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const products = [
         { name: "Product 1", price: 10 },
         { name: "Product 2", price: 20 },
-        { name: "Product 1", price: 10 },
-        { name: "Product 2", price: 20 },
-        { name: "Product 1", price: 10 },
-        { name: "Product 2", price: 20 },
         { name: "Product 3", price: 30 }
         // Add more products as needed
     ];
@@ -59,6 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
             basketList.removeChild(item);
             updateTotal();
         });
+        // Save basket items to localStorage
+        saveBasketToLocalStorage();
     }
 
     // Function to update total price
@@ -81,4 +79,17 @@ document.addEventListener('DOMContentLoaded', function() {
         // Redirect to checkout page
         window.location.href = 'checkout.html';
     });
+
+    // Function to save basket items to localStorage
+    function saveBasketToLocalStorage() {
+        const items = [];
+        const basketItems = basketList.querySelectorAll('li');
+        basketItems.forEach(item => {
+            const name = item.textContent.split(' x')[0];
+            const quantity = parseInt(item.textContent.split('x')[1].split('-')[0].trim());
+            const price = parseFloat(item.textContent.split('$')[1]);
+            items.push({ name, quantity, price });
+        });
+        localStorage.setItem('basketItems', JSON.stringify(items));
+    }
 });
