@@ -10,10 +10,11 @@
 }
 
 .thumbnail {
-    width: 200px;
+    width: 450px;
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease;
+    box-shadow: 0 30px 50px #505050;
 }
 
 .thumbnail:hover {
@@ -34,4 +35,9 @@
 
 .member:hover .details {
     display: block;
+}
+
+.title{
+    font-size: 30px;
+    text-align: center;
 }
