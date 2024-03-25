@@ -36,17 +36,31 @@
             <p>At Aqua Echo Alliance, we are committed to promoting ocean conservation and raising awareness about the importance of preserving marine ecosystems. We align with the UN Sustainable Development Goal 14: Life Below Water, aiming to protect and sustainably use the oceans, seas, and marine resources for sustainable development.</p>
         </div>
     </div>
-      
-      
     </section>
-    
+
+    <section>
+      <div class="introduction"> What is SDG 14 - Life Below Water? </div>
+      <img id="sgdlogo" src="thumb1.png" alt="SDG Logo">  
+      <p id="intro-content">SDG 14, or Sustainable Development Goal 14, is titled "Life Below Water." It is one of the seventeen goals established by the United Nations as part of the 2030 Agenda for Sustainable Development. SDG 14 focuses on conserving and sustainably using the oceans, seas, and marine resources for sustainable development. This goal aims to address various challenges faced by marine ecosystems, including marine pollution, overfishing, habitat destruction, and ocean acidification, among others. By promoting the conservation and sustainable use of marine resources, SDG 14 seeks to protect marine biodiversity, ensure the health and productivity of oceans, and support the livelihoods of millions of people who depend on marine ecosystems for food, income, and other resources. Achieving SDG 14 is crucial for the overall health of the planet and for securing the well-being of present and future generations.</p>
+
+    </section>
+
+
     <section class="content-links">
-      <h2>Explore Our Content</h2>
+      <h2>What we do</h2>
       <div class="gallery">
-        <a href="../content-pages/page1.html"><img src="page1-thumbnail.jpg" alt="Page 1"></a>
-        <a href="page2.html"><img src="page2-thumbnail.jpg" alt="Page 2"></a>
-        <a href="page3.html"><img src="page3-thumbnail.jpg" alt="Page 3"></a>
-        <a href="page4.html"><img src="page4-thumbnail.jpg" alt="Page 4"></a>
+        <div class="tile" onclick="tileClicked(2)">
+          <a href="../content-pages/page2.html"><img src="thumb2.png" alt="Page 2"></a>
+          <span>Beach Cleanups</span>
+        </div>
+        <div class="tile" onclick="tileClicked(3)">
+          <a href="../content-pages/page3.html"><img src="thumb3.png" alt="Page 3"></a>
+          <span>Raising Awareness</span>
+        </div>
+        <div class="tile" onclick="tileClicked(3)">
+          <a href="../content-pages/page4.html"><img src="thumb4.png" alt="Page 4"></a>
+          <span>Building a Community</span>
+        </div>
       </div>
     </section>
   </main>
@@ -56,6 +70,13 @@
       © 2024 Aqua Echo Alliance. All rights reserved.
     </div>
   </footer>
+
+  <script>
+    function tileClicked(tileNumber) {
+      alert("Tile " + tileNumber + " clicked!");
+      // You can add more actions here, such as displaying content or navigating to another page
+    }
+  </script>
   
 </body>
 </html>
