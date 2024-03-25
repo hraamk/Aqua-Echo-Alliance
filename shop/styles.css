@@ -1,0 +1,115 @@
+body {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text color */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column; /* Set flex direction to column */
+}
+
+.our-products {
+    width: 200px; /* Fixed width for "Our Products" container */
+    margin-bottom: 20px; /* Add margin for spacing */
+}
+
+.main-content {
+    flex: 1; /* Takes up remaining space */
+    display: flex;
+    gap: 20px; /* Add gap between products and basket */
+}
+
+.products-grid {
+    flex: 0 0 80%; /* 80% width */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Flexible grid */
+    gap: 20px;
+}
+.product {
+    height: 150px;
+    width: 150px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease; /* Add transition for smoother hover effect */
+}
+
+.product:hover {
+    transform: scale(1.05); /* Scale up on hover to make it stand out */
+}
+
+.product h2,
+.product p {
+    margin: 0;
+}
+
+.product input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.product button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.product button:hover {
+    background-color: #0056b3;
+}
+
+
+.basket {
+    flex: 0 0 20%; /* 20% width */
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.basket h2 {
+    margin-top: 0;
+}
+
+.basket ul {
+    list-style: none;
+    padding: 0;
+}
+
+.basket li {
+    margin-bottom: 10px;
+}
+
+.remove-item {
+    background-color: transparent;
+    border: 2px solid #ff3d00; /* Red border */
+    color: #ff3d00; /* Red color */
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.remove-item:hover {
+    background-color: #ff3d00; /* Red background on hover */
+    color: #ffffff; /* White text color on hover */
+}
+
+
