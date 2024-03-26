@@ -2,11 +2,15 @@
 
 /* Header styles */
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: rgb(255, 255, 255); /* Ocean blue */
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 999;
   }
   
   .logo img {
