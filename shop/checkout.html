@@ -4,41 +4,53 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Checkout Page</title>
-<link rel="stylesheet" href="checkoutstyle.css"> <!-- Link to external CSS file -->
+<link rel="stylesheet" href="checkoutstyle.css">
 </head>
 <body>
 
-<div class="container">
+<div class="checkout-container">
     <h1>Checkout</h1>
-    <div id="basket-items" class="basket-items">
-        <!-- Basket items will be dynamically generated here -->
+    <div class="checkout-details">
+        <div class="personal-details">
+            <h2>Personal Details</h2>
+            <!-- Form fields for personal details -->
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="text" id="contact-number" name="contact-number" placeholder="Contact Number" required>
+        </div>
+        <div class="billing-address">
+            <h2>Billing Address</h2>
+            <!-- Form fields for billing address -->
+            <input type="text" id="country" name="country" placeholder="Country" required>
+            <input type="text" id="state" name="state" placeholder="State" required>
+            <input type="text" id="district" name="district" placeholder="District" required>
+            <input type="text" id="postcode" name="postcode" placeholder="Postcode" required>
+            <input type="text" id="street" name="street" placeholder="Street" required>
+        </div>
+        <div class="payment-method">
+            <h2>Payment Method</h2>
+            <!-- Form fields for payment method -->
+            <input type="text" id="cardholder-name" name="cardholder-name" placeholder="Cardholder Name" required>
+            <input type="text" id="card-number" name="card-number" placeholder="Card Number" required>
+            <input type="text" id="expiry-date" name="expiry-date" placeholder="Expiry Date" required>
+            <input type="text" id="ccv" name="ccv" placeholder="CCV" required>
+        </div>
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="order-details">
+                <p>Product 1 - $10</p>
+                <p>Product 2 - $20</p>
+                <p>Product 3 - $30</p>
+            </div>
+            <div class="total">
+                <p>Total: $60</p>
+            </div>
+            <div id="payment_btn"><button>Payment!</button></div>
+        </div>
     </div>
-    <div id="total" class="total">Total: $0.00</div>
+    
 </div>
-<div class="container">
-    <div class="checkout-form">
-        <!-- Personal Details Section -->
-        <h2>Personal Details</h2>
-        <!-- Form fields for personal details -->
+<script src="script.js"></script>
 
-        <!-- Shipping Address Section -->
-        <h2>Shipping Address</h2>
-        <!-- Form fields for shipping address -->
-
-        <!-- Contact Info Section -->
-        <h2>Contact Info</h2>
-        <!-- Form fields for contact info -->
-
-        <!-- Proceed to Payment Button -->
-        <button id="proceed-to-payment">Proceed to Payment</button>
-    </div>
-    <div class="basket">
-        <!-- Basket Section -->
-        <h2>Your Basket</h2>
-        <!-- Display basket items here -->
-    </div>
-</div>
-
-<script src="checkoutscript.js"></script> <!-- Link to external JavaScript file -->
 </body>
 </html>

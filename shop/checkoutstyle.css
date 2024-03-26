@@ -1,74 +1,121 @@
-/* Styles for Checkout Page */
-
 body {
-    background-color: #f5f5f5;
     font-family: Arial, sans-serif;
+    background-color: #f4d2d2;
     margin: 0;
     padding: 0;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 20px auto;
+.checkout-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
-.details-container {
-    width: 80%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-.basket-container {
-    width: 20%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form {
+h1 {
+    font-size: 32px;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-form input,
-form select {
+.checkout-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: ;
+    align-items: center;
+}
+
+.order-summary {
+    flex: 1;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.order-summary h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.order-details {
+    margin-bottom: 20px;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.checkout-details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.billing-address,
+.payment-method {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.billing-address h2,
+.payment-method h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.personal-details {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.personal-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.personal-details input[type="text"],
+.personal-details input[type="email"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
-form label {
-    font-weight: bold;
+.personal-details input[type="text"]:focus,
+.personal-details input[type="email"]:focus {
+    outline: none;
+    border-color: #007bff;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    cursor: pointer;
+    box-sizing: border-box;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .details-container,
-    .basket-container {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
 }

@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shop Page</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="../styles.css">
-
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
     <header>
-        <div class="logo">
-          <a href="../home/home.html" class><img src="../logo.png" alt="Aqua Echo Alliance Logo"></a>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="../home/home.html">Home</a></li>
-              <li><a href="../gallery/gallery.html">Gallery</a></li>
-              <li><a href="../shop/shop.html">Shop</a></li>
-              <li><a href="../profile/profile.html">Profile</a></li>
-              <li><a href="../feedback/feedback.html">Feedback</a></li>
-              <li><a href="../team/team.html" class="active">Team</a></li>
-              <li><a href="../sitemap/sitemap.html">Sitemap</a></li>
-            
-          </ul>
-        </nav>
-      </header>
+      <div class="logo">
+        <a href="../home/home.html" class
+          ><img src="../logo.png" alt="Aqua Echo Alliance Logo"
+        /></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../home/home.html">Home</a></li>
+          <li><a href="../gallery/gallery.html">Gallery</a></li>
+          <li><a href="../shop/shop.html">Shop</a></li>
+          <li><a href="../profile/profile.html">Profile</a></li>
+          <li><a href="../feedback/feedback.html">Feedback</a></li>
+          <li><a href="../team/team.html" class="active">Team</a></li>
+          <li><a href="../sitemap/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<div class="container">
-    <h1>Our Products</h1>
-    <div class="main-content">
+    <div class="container">
+      <h1>Our Products</h1>
+      <div class="main-content">
         <div class="products-grid">
-            <!-- Product containers will be dynamically generated here -->
+          <!-- Product containers will be dynamically generated here -->
         </div>
-        <div class="basket">
-            <h2>The Basket</h2>
-            <ul id="basket-list"></ul>
+        <div class="basket" id="basket" style="display: none;">
+          <h2>The Basket</h2>
+          <h3 id="waiting-prompt" style="display: block">
+            waiting for your order
+          </h3>
+          <ul id="basket-list"></ul>
+          <div id="to_checkout_btn" style="display: none">
+            <button>Pay Here</button>
+          </div>
+          <div id="total" style="display: none"></div>
         </div>
+      </div>
     </div>
-</div>
 
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

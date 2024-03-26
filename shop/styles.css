@@ -1,6 +1,6 @@
 body {
-    background-color: #000000; /* Black background */
-    color: #ffffff; /* White text color */
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text color */
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -14,11 +14,6 @@ body {
     flex-direction: column; /* Set flex direction to column */
 }
 
-.our-products {
-    width: 200px; /* Fixed width for "Our Products" container */
-    margin-bottom: 20px; /* Add margin for spacing */
-}
-
 .main-content {
     flex: 1; /* Takes up remaining space */
     display: flex;
@@ -27,22 +22,25 @@ body {
 
 .products-grid {
     flex: 0 0 80%; /* 80% width */
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Flexible grid */
+    display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+
+
 }
 .product {
-    height: 150px;
-    width: 150px;
-    background-color: #fff;
+    height: 250px;
+    width: 250px;
+    background-color: #f9f9f9; /* Light gray background */
     color: #000;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     transition: transform 0.3s ease; /* Add transition for smoother hover effect */
 }
 
@@ -63,8 +61,8 @@ body {
 
 .product button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #007bff; /* Blue button color */
+    color: #fff; /* White text color */
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -72,13 +70,13 @@ body {
 }
 
 .product button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
 
 .basket {
     flex: 0 0 20%; /* 20% width */
-    background-color: #222222;
+    background-color: #f9f9f9; /* Light gray background */
     padding: 20px;
     border-radius: 10px;
 }
@@ -112,4 +110,58 @@ body {
     color: #ffffff; /* White text color on hover */
 }
 
+.proceed-to-checkout {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff; /* White text color */
+    background-color: #007bff; /* Blue button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
+.proceed-to-checkout:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+/* CSS styles for the modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Positioning context */
+    z-index: 1; /* Make sure it appears on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scrolling if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Center the modal vertically */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Set the width */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,18 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
     const basketList = document.getElementById('basket-list');
+    const totalElement = document.getElementById('total');
+    const payhere = document.getElementById('to_checkout_btn');
+    const waiting_prompt = document.getElementById('waiting-prompt');
     const productsGrid = document.querySelector('.products-grid');
-    const totalElement = document.createElement('div');
-    totalElement.id = 'total';
-    totalElement.textContent = 'Total: $0.00';
-    const proceedToCheckoutBtn = document.createElement('button');
-    proceedToCheckoutBtn.textContent = 'Proceed to Checkout';
-    proceedToCheckoutBtn.classList.add('add-to-cart'); // Applying same style as "Add to Cart" button
+    const basket = document.getElementById('basket');
+
+    // Function to show "Pay Here" button and total element
+    function showCheckout() {
+        payhere.style.display = 'block';
+        totalElement.style.display = 'block';
+        waiting_prompt.style.display = 'none';
+        basket.style.display = 'block';
+
+    }
+
+    // Function to hide "Pay Here" button and total element
+    function hideCheckout() {
+        payhere.style.display = 'none';
+        totalElement.style.display = 'none';
+        waiting_prompt.style.display = 'block';
+        basket.style.display = 'none';
+    }
 
     // Sample products data
     const products = [
-        { name: "Product 1", price: 10 },
-        { name: "Product 2", price: 20 },
-        { name: "Product 3", price: 30 }
+        { id: 1, name: "Product 1", price: 10 },
+        { id: 2, name: "Product 2", price: 20 },
+        { id: 1, name: "Product 1", price: 10 },
+        { id: 2, name: "Product 2", price: 20 },
+        { id: 1, name: "Product 1", price: 10 },
+        { id: 2, name: "Product 2", price: 20 },
+        { id: 3, name: "Product 3", price: 100 }
         // Add more products as needed
     ];
 
@@ -33,7 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Render products on the page
     products.forEach(product => {
         const productElement = createProductElement(product);
-        productsGrid.appendChild(productElement);
+        document.querySelector('.products-grid').appendChild(productElement);
+        
 
         // Add event listener to "Add to Cart" button
         const addToCartBtn = productElement.querySelector('.add-to-cart');
@@ -41,8 +61,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const quantity = parseInt(productElement.querySelector('.quantity').value);
             addToBasket(product, quantity);
             updateTotal();
+            showCheckout();
         });
     });
+
+
+
+    
 
     // Function to add product to the basket
     function addToBasket(product, quantity) {
@@ -53,7 +78,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const removeBtn = item.querySelector('.remove-item');
         removeBtn.addEventListener('click', function() {
             basketList.removeChild(item);
+            removeFromLocalStorage(product.name); // Remove item from local storage
             updateTotal();
+            if (basketList.children.length === 0) {
+                hideCheckout(); // Hide "Pay Here" button and total if basket is empty
+            }
         });
         // Save basket items to localStorage
         saveBasketToLocalStorage();
@@ -72,10 +101,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Append total element and "Proceed to Checkout" button to the basket
     basketList.parentNode.appendChild(totalElement);
-    basketList.parentNode.appendChild(proceedToCheckoutBtn);
 
     // Event listener for "Proceed to Checkout" button
-    proceedToCheckoutBtn.addEventListener('click', function() {
+    payhere.addEventListener('click', function() {
         // Redirect to checkout page
         window.location.href = 'checkout.html';
     });
@@ -92,4 +120,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         localStorage.setItem('basketItems', JSON.stringify(items));
     }
+
+    // Function to remove item from local storage
+    function removeFromLocalStorage(name) {
+        const items = JSON.parse(localStorage.getItem('basketItems'));
+        const updatedItems = items.filter(item => item.name !== name);
+        localStorage.setItem('basketItems', JSON.stringify(updatedItems));
+    }
+    
 });
