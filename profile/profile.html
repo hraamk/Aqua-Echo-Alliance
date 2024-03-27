@@ -5,12 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Profile</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-
-<div id="loading-message">
-  <p>Loading...</p>
-</div>
+  <header>
+    <div class="logo">
+      <a href="../home/home.html" class><img src="../logo.png" alt="Aqua Echo Alliance Logo"></a>
+    </div>
+    <nav>
+        <ul>
+          <li><a href="../home/home.html">Home</a></li>
+          <li><a href="../gallery/gallery.html" class="active">Gallery</a></li>
+          <li><a href="../shop/shop.html">Shop</a></li>
+          <li><a href="../profile/profile.html">Profile</a></li>
+          <li><a href="../feedback/feedback.html">Feedback</a></li>
+          <li><a href="../team/team.html">Team</a></li>
+          <li><a href="../sitemap/sitemap.html">Sitemap</a></li>
+          </ul>
+    </nav>
+  </header>
+  <div id="parallax-container">
+    <div id="parallax-bg"></div>
+    <div id="loading-message" class="centered">
+      <h1>Create New User</h1>
+      <button id="create-user">Click me to start</button>
+    </div>
+  </div>
 
 <div id="profile" class="hidden">
   <h2>User Profile</h2>
