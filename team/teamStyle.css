@@ -1,5 +1,6 @@
 .team {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -10,6 +11,7 @@
 }
 
 .thumbnail {
+    margin-left: 50px;
     width: 450px;
     height: auto;
     cursor: pointer;
@@ -23,14 +25,14 @@
 
 .details {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgb(0, 38, 255);
     color: #fff;
     padding: 10px;
     display: none;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
+    transform: translate(0%, -50%);
+    width: 400px;
 }
 
 .member:hover .details {

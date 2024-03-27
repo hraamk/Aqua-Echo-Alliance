@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSS Placement Example</title>
-<style>
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  .box {
-    width: 200px;
-    height: 200px;
-    background-color: coral;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beach Cleanup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            max-width: 48%;
+            border-radius: 8px;
+        }
+    </style>
 </head>
+
 <body>
-<div class="container">
-  <div class="box"></div>
-</div>
+    <div class="container">
+        <h1>Join Us for a Beach Cleanup!</h1>
+        <div class="image-container">
+            <img src="beach_clean1.jpg" alt="Beach Cleanup 1">
+            <img src="beach_clean2.jpg" alt="Beach Cleanup 2">
+        </div>
+        <p>Help us make a difference by joining our upcoming beach cleanup event! Every year, tons of trash end up on our beautiful beaches, harming marine life and polluting the environment. But together, we can change that.</p>
+        <p>Our beach cleanup event will take place on [date] at [location]. We'll provide all the necessary equipment, including gloves and bags. Just bring your enthusiasm and commitment to keeping our beaches clean!</p>
+        <p>Whether you're a local resident, a visitor, or just someone who cares about the environment, we welcome you to join us in this important initiative. Together, we can protect our oceans and create a cleaner, healthier planet for future generations.</p>
+        <p>Don't miss out on this opportunity to make a positive impact on your community and the environment. Mark your calendars and spread the word!</p>
+    </div>
 </body>
+
 </html>
