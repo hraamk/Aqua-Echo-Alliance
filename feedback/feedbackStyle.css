@@ -5,13 +5,17 @@
     padding: 20px;
 }
 
+body{
+    background-image: url(../bg.jpeg);
+}
+
 
 
 .form {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-   width: 60%;
+    width: 60%;
     background-color: #ffffff;
     padding: 20px;
     border-left: 30px;
