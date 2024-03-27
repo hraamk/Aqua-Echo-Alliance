@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function showCheckout() {
         payhere.style.display = 'block';
         totalElement.style.display = 'block';
-        waiting_prompt.style.display = 'none';
         basket.style.display = 'block';
+        productsGrid.style.flex = '0 0 80%';
 
     }
 
@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function hideCheckout() {
         payhere.style.display = 'none';
         totalElement.style.display = 'none';
-        waiting_prompt.style.display = 'block';
         basket.style.display = 'none';
+        productsGrid.style.flex = '0 0 100%';
     }
 
     // Sample products data
@@ -64,10 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
             showCheckout();
         });
     });
-
-
-
-    
 
     // Function to add product to the basket
     function addToBasket(product, quantity) {
