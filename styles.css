@@ -12,6 +12,11 @@ header {
     align-items: center;
     z-index: 999;
   }
+
+  body{
+    margin-top: 50px;
+
+  }
   
   .logo img {
     width: 150px; /* Adjust logo size as needed */
@@ -31,6 +36,7 @@ header {
   nav ul li {
     display: inline;
   }
+  
   
   nav ul li a {
     color: rgb(124, 124, 124);

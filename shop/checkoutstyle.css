@@ -26,7 +26,6 @@ h1 {
 .checkout-content {
     display: flex;
     flex-direction: column;
-    justify-content: ;
     align-items: center;
 }
 
