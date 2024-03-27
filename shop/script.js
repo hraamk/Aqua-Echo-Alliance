@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const products = [
         { id: 1, name: "Cup", price: 40, image: "productImages/cup.jpg" },
         { id: 2, name: "Hoodie", price: 110, image: "productImages/hoodie.jpg" },
-        { id: 2, name: "Unisex T-Shirt", price: 58, image: "productImages/tshirt.jpg" },
+        { id: 2, name: "T-Shirt", price: 58, image: "productImages/tshirt.jpg" },
         { id: 3, name: "Cap", price: 20, image: "productImages/cap.jpg"}
         // Add more products as needed
     ];

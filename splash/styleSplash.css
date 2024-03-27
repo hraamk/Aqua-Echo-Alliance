@@ -4,19 +4,19 @@ body {
     font-family: Arial, sans-serif;
     background-image: url('SplashBackground.jpg');
     color: white;
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-  }
-  ul{
-    list-style-type: none;
+    height: 80vh;
   }
   
   .splash-screen {
+    height: 100%;
+    justify-content:center;
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
-  
+
   .title {
     font-size: 3em;
   }
@@ -27,7 +27,8 @@ body {
   }
   
   .group-members {
-    margin-bottom: 20px;
+    justify-content: flex-end;
+    text-align: center;
   }
   
   .loader {
@@ -38,6 +39,7 @@ body {
     height: 50px;
     margin: 0 auto;
     animation: spin 2s linear infinite;
+    align-items: center;
   }
   
   @keyframes spin {
