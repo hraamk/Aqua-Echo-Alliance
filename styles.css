@@ -51,7 +51,6 @@ header {
   
   /* Main content styles */
   main {
-    padding: 20px;
     display: flex;
     flex-direction: column;
   }
@@ -76,7 +75,6 @@ header {
   .photos{
     position: relative;
     display: flex;
-    width: 100%;
   }
 
   .picture{
@@ -84,15 +82,21 @@ header {
     
   }
 
+  .picture img{
+   width: 100%;
+    
+  }
+
 
   .description {
+    width: 33.3%;
+    margin-top: auto;
+    margin-bottom: auto;
     position: absolute;
-    font-size: 50px; /* Ensure content is above the video */
+    font-size: 30px; /* Ensure content is above the video */
     color: #fff; /* Example text color */
     text-align: center; /* Example alignment */
-    padding: 20px;
     padding-top: 60px;
-    animation: animate 1s ease-in-out 0.3s 1 forwards;
   }
 
 

@@ -2,12 +2,17 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('SplashBackground.jpg');
+    background-image: url('SplashBg.jpeg');
+    background-size: cover; /* Scale the background image to cover the entire container */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    background-position: center; /* Position the background image at the center of the container */
+    background-attachment: fixed;
     color: white;
     justify-content: center;
     align-items: center;
     height: 80vh;
   }
+  
   
   .splash-screen {
     height: 100%;
