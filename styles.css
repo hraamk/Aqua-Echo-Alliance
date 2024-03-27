@@ -49,7 +49,6 @@ header {
   
   /* Main content styles */
   main {
-    padding: 20px;
     display: flex;
     flex-direction: column;
   }
