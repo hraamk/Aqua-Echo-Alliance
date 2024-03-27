@@ -1,12 +1,52 @@
-/* CSS for styling */
 body {
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-image: url(/gallery/img1.jpeg);
+  background-size: cover;
+  animation: fadeInBackground 2s ease-in-out forwards;
 }
 
 #loading-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  margin-top: 100px;
+  background-color: #ffffff; /* Background color */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow */
+  animation: fadeIn 0.5s ease forwards;
+}
+
+#loading-message h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333333; /* Text color */
+}
+
+#create-user {
+  background-color: #007bff; /* Button background color */
+  color: #ffffff; /* Button text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#create-user:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+@keyframes fadeInBackground {
+  from {
+    opacity: 0; /* Start with fully transparent */
+  }
+  to {
+    opacity: 1; /* Fade in to fully opaque */
+  }
 }
 
 #profile {
@@ -25,7 +65,7 @@ body {
 }
 
 #prompt-container {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   height: 100vh;

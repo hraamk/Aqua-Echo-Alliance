@@ -1,3 +1,8 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
 body {
     background-color: #ffffff; /* White background */
     color: #000000; /* Black text color */
@@ -130,5 +135,8 @@ body {
     background-color: #0056b3; /* Darker blue on hover */
 }
 
-
-
+#foot{
+position: absolute;
+bottom: 0;
+background-color: #ddd;
+}

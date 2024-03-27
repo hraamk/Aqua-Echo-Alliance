@@ -1,6 +1,5 @@
 // JavaScript for progressive profile building
 
-
 const names = {
   "basic-info": "Personal Details",
   "preferences": "Volunteering Tasks",
@@ -18,6 +17,7 @@ const prompts = [
 let currentStep = 0;
 
 function showPrompt() {
+  document.getElementById('prompt-container').style.display = 'flex';
   document.getElementById('custom-prompt').classList.remove('hidden');
   document.getElementById('prompt-content').innerHTML = `
     <label for="prompt-input">${prompts[currentStep].prompt}</label>
@@ -51,7 +51,6 @@ function submitPrompt() {
       document.getElementById('profile').classList.remove('hidden');
       document.getElementById('prompt-container').classList.remove('hidden');
       document.getElementById('custom-prompt').style.display = 'none';
-  
     }
   } else {
     // If user leaves the input empty, show a message
@@ -66,7 +65,8 @@ function goBack() {
   }
 }
 
-// Show the initial prompt when the page loads
-document.addEventListener('DOMContentLoaded', function() {
+// Function to show profile-building elements after clicking the button
+document.getElementById('create-user').addEventListener('click', function() {
+  document.getElementById('loading-message').classList.add('hidden');
   showPrompt();
 });
