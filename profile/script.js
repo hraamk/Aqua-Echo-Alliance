@@ -20,14 +20,13 @@ let currentStep = 0;
 function showPrompt() {
   document.getElementById('custom-prompt').classList.remove('hidden');
   document.getElementById('prompt-content').innerHTML = `
-
-    <div class="progress-bar">
-      <div class="progress" style="width: ${(currentStep / prompts.length) * 100}%"></div>
-    </div>
     <label for="prompt-input">${prompts[currentStep].prompt}</label>
     <input type="text" id="prompt-input">
     <button onclick="submitPrompt()">Submit</button>
     <button onclick="goBack()" id="back-button">Back</button>
+    <div class="progress-bar">
+    <div class="progress" style="width: ${(currentStep / prompts.length) * 100}%"></div>
+  </div>
   `;
 
   const backButton = document.getElementById('back-button');

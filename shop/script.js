@@ -25,13 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Sample products data
     const products = [
-        { id: 1, name: "Product 1", price: 10 },
-        { id: 2, name: "Product 2", price: 20 },
-        { id: 1, name: "Product 1", price: 10 },
-        { id: 2, name: "Product 2", price: 20 },
-        { id: 1, name: "Product 1", price: 10 },
-        { id: 2, name: "Product 2", price: 20 },
-        { id: 3, name: "Product 3", price: 100 }
+        { id: 1, name: "Cup", price: 40, image: "productImages/cup.jpg" },
+        { id: 2, name: "Hoodie", price: 110, image: "productImages/hoodie.jpg" },
+        { id: 2, name: "Unisex T-Shirt", price: 58, image: "productImages/tshirt.jpg" },
+        { id: 3, name: "Cap", price: 20, image: "productImages/cap.jpg"}
         // Add more products as needed
     ];
 
@@ -40,12 +37,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const productElement = document.createElement('div');
         productElement.classList.add('product');
         productElement.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" class="product-image">
+        <div class="product-details">
             <h2>${product.name}</h2>
             <p>Price: $${product.price}</p>
             <label for="quantity">Quantity:</label>
             <input type="number" class="quantity" name="quantity" value="1" min="1">
             <button class="add-to-cart">Add to Cart</button>
-        `;
+        </div>
+    `;
         return productElement;
     }
 

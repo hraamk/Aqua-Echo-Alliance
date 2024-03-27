@@ -44,6 +44,11 @@ body {
     transition: transform 0.3s ease; /* Add transition for smoother hover effect */
 }
 
+.product .product-image {
+    max-width: 73%;
+    max-height: 73%;
+}
+
 .product:hover {
     transform: scale(1.05); /* Scale up on hover to make it stand out */
 }
