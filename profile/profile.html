@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progressive User Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="loading-message">
+  <p>Loading...</p>
+</div>
+
+<div id="profile" class="hidden">
+  <h2>User Profile</h2>
+  <div id="basic-info" class="hidden">
+    <p><strong>Name:</strong> <span id="basic-info-info"></span></p>
+  </div>
+  <div id="preferences" class="hidden">
+    <p><strong>Preferences:</strong> <span id="preferences-info"></span></p>
+  </div>
+  <div id="interests" class="hidden">
+    <p><strong>Interests:</strong> <span id="interests-info"></span></p>
+  </div>
+  <div id="other" class="hidden">
+    <p><strong>Other:</strong> <span id="other-info"></span></p>
+  </div>
+</div>
+
+<div id="prompt-container" class="hidden">
+  <!-- Custom prompt modal -->
+  <div id="custom-prompt" class="hidden">
+    <div id="prompt-content">
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

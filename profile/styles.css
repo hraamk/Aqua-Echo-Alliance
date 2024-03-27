@@ -1,0 +1,93 @@
+/* CSS for styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+#loading-message {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#profile {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+#profile p {
+  margin: 5px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#prompt-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#custom-prompt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#prompt-content {
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#prompt-content label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#prompt-content input[type="text"] {
+  width: calc(100% - 20px); /* Subtract padding */
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#prompt-content button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#prompt-content button:hover {
+  background-color: #0056b3;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 5px;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+#back-button{
+  display: none;
+}
