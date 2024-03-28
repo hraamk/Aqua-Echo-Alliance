@@ -23,10 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
             displayErrorMessage('email', 'Invalid email format');
             isValid = false;
         }
-        if (!ratingInput.value) {
-            displayErrorMessage('rating', 'Rating is required');
-            isValid = false;
-        }
         if (!commentInput.value.trim()) {
             displayErrorMessage('comment', 'Comment is required');
             isValid = false;
