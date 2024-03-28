@@ -30,6 +30,8 @@ body{
 }
 
 .radio-group{
+    margin-left: auto;
+    margin-right: auto;
     line-height: 150%;
     text-align: center;
     display: flex;
