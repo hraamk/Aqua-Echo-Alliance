@@ -44,6 +44,8 @@ h2 {
     color: #333;
 }
 
+#plastic-pollution,
+#feedback,
 #intro p {
     font-size: 1.7em;
     color: #ffffffc9;
@@ -51,6 +53,7 @@ h2 {
     padding: 0% 20%;
 }
 
+#feedback .join-button,
 #intro .join-button {
     display: inline-block;
     padding: 12px 24px;
@@ -62,6 +65,7 @@ h2 {
     border: none;
 }
 
+#feedback .join-button:hover,
 #intro .join-button:hover {
     background-color: #005ea6;
 }
@@ -71,9 +75,22 @@ h2 {
 #marine-biodiversity,
 #raising-awareness
  {
-    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Set to viewport height */
+    background-color: #ffffff;
 }
 
+
+#marine-biodiversity,
+#raising-awareness p{
+    font-size: 1.7em;
+    color: #000000c9;
+    margin-bottom: 30px;
+    padding: 0% 20%;
+}
 /* Responsive Styles */
 @media screen and (max-width: 600px) {
 
