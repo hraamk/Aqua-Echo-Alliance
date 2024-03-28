@@ -16,8 +16,17 @@ body {
     margin: 0 auto;
     padding: 50px 30px;
     display: flex;
-    flex-direction: column; /* Set flex direction to column */
+    flex-direction: column;
+    animation: fadeInBackground 1s ease-in-out forwards;
 }
+@keyframes fadeInBackground {
+    from {
+      opacity: 0; /* Start with fully transparent */
+    }
+    to {
+      opacity: 1; /* Fade in to fully opaque */
+    }
+  }
 
 .main-content {
     flex: 1; /* Takes up remaining space */
