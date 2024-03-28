@@ -8,6 +8,11 @@ body{
     overflow: hidden;
 }
 
+.container{
+    height: 80vh;
+    width: 100%;
+}
+
 
 .container .slide .item{
     width: 200px;

@@ -160,13 +160,9 @@ header {
   }
 
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
-
 
 
 .intro{
@@ -202,7 +198,7 @@ header {
 
 .tile {
   width: 25%;
-  height: 35vh;
+  height: 300px;
   margin: 10px;
   float: left;
   cursor: pointer;
