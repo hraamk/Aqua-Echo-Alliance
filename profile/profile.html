@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Profile</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="../styles.css">
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <a href="../home/home.html" class><img src="../logo.png" alt="Aqua Echo Alliance Logo"></a>
-    </div>
-    <nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../home/home.html" class
+          ><img src="../logo.png" alt="Aqua Echo Alliance Logo"
+        /></a>
+      </div>
+      <nav>
         <ul>
           <li><a href="../home/home.html">Home</a></li>
           <li><a href="../gallery/gallery.html" class="active">Gallery</a></li>
@@ -21,41 +23,38 @@
           <li><a href="../feedback/feedback.html">Feedback</a></li>
           <li><a href="../team/team.html">Team</a></li>
           <li><a href="../sitemap/sitemap.html">Sitemap</a></li>
-          </ul>
-    </nav>
-  </header>
-  <div id="parallax-container">
-    <div id="parallax-bg"></div>
+        </ul>
+      </nav>
+    </header>
+
     <div id="loading-message" class="centered">
       <h1>Create New User</h1>
       <button id="create-user">Click me to start</button>
     </div>
-  </div>
 
-<div id="profile" class="hidden">
-  <h2>User Profile</h2>
-  <div id="basic-info" class="hidden">
-    <p><strong>Name:</strong> <span id="basic-info-info"></span></p>
-  </div>
-  <div id="preferences" class="hidden">
-    <p><strong>Preferences:</strong> <span id="preferences-info"></span></p>
-  </div>
-  <div id="interests" class="hidden">
-    <p><strong>Interests:</strong> <span id="interests-info"></span></p>
-  </div>
-  <div id="other" class="hidden">
-    <p><strong>Other:</strong> <span id="other-info"></span></p>
-  </div>
-</div>
-
-<div id="prompt-container" class="hidden">
-  <!-- Custom prompt modal -->
-  <div id="custom-prompt" class="hidden">
-    <div id="prompt-content">
+    <div id="profile" class="hidden">
+      <h2>User Profile</h2>
+      <div id="basic-info" class="hidden">
+        <p><strong>Name:</strong> <span id="basic-info-info"></span></p>
+      </div>
+      <div id="preferences" class="hidden">
+        <p><strong>Preferences:</strong> <span id="preferences-info"></span></p>
+      </div>
+      <div id="interests" class="hidden">
+        <p><strong>Interests:</strong> <span id="interests-info"></span></p>
+      </div>
+      <div id="other" class="hidden">
+        <p><strong>Other:</strong> <span id="other-info"></span></p>
+      </div>
     </div>
-  </div>
-</div>
 
-<script src="script.js"></script>
-</body>
+    <div id="prompt-container" class="hidden">
+      <!-- Custom prompt modal -->
+      <div id="custom-prompt" class="hidden">
+        <div id="prompt-content"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
