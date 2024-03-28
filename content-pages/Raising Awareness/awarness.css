@@ -27,6 +27,8 @@ h2 {
 }
 
 /* Styles for intro sections */
+#plastic-pollution,
+#feedback,
 #intro{
     display: flex;
     flex-direction: column;
@@ -34,11 +36,6 @@ h2 {
     align-items: center; /* Center vertically */
     height: 100vh; /* Set to viewport height */
     background-color: #000000;
-}
-
-#check{
-    opacity: 0;
-    transition: opacity at ease;
 }
 
 #scroll {
@@ -49,7 +46,7 @@ h2 {
 
 #intro p {
     font-size: 1.7em;
-    color: #ffffff;
+    color: #ffffffc9;
     margin-bottom: 30px;
     padding: 0% 20%;
 }
@@ -72,9 +69,8 @@ h2 {
 
 
 #marine-biodiversity,
-#plastic-pollution,
-#raising-awareness,
-#feedback {
+#raising-awareness
+ {
     padding-bottom: 20px;
 }
 
