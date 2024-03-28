@@ -28,7 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 1, name: "Cup", price: 40, image: "productImages/cup.jpg" },
         { id: 2, name: "Hoodie", price: 110, image: "productImages/hoodie.jpg" },
         { id: 2, name: "T-Shirt", price: 58, image: "productImages/tshirt.jpg" },
-        { id: 3, name: "Cap", price: 20, image: "productImages/cap.jpg"}
+        { id: 3, name: "Cap", price: 20, image: "productImages/cap.jpg"},
+        { id: 3, name: "Bottle", price: 40, image: "productImages/bottle.jpg"},
+        { id: 3, name: "Keytag", price: 10, image: "productImages/keytag.jpg"},
+        { id: 3, name: "Umbrella", price: 50, image: "productImages/umbrella.jpg"}
         // Add more products as needed
     ];
 
