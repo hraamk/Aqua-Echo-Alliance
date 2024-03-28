@@ -17,6 +17,7 @@ header {
 
   body{
     margin-top: 100px;
+    animation: fadeInBackground 1.2s ease-in-out forwards;
 
   }
   
@@ -201,11 +202,16 @@ header {
 
 .tile {
   width: 200px;
-  height: 200px;
+  height: 30vh;
   margin: 10px;
   float: left;
   cursor: pointer;
   transition: transform 0.3s ease;
+}
+
+.tile .text{
+  color: #000;
+  margin-top: 20px;
 }
 
 
@@ -213,6 +219,17 @@ header {
 /* Hover effect */
 .tile:hover {
   transform: scale(1.1);
+}
+
+.join-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0077cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: background-color 0.3s ease;
+  border: none;
 }
 
 
@@ -227,6 +244,16 @@ header {
       opacity: 1;
       transform: translate(0);
       filter: blur(0);
+  }
+}
+
+
+@keyframes fadeInBackground {
+  from {
+    opacity: 0; /* Start with fully transparent */
+  }
+  to {
+    opacity: 1; /* Fade in to fully opaque */
   }
 }
 
