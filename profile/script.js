@@ -110,6 +110,7 @@ function cancelPrompt() {
   promptmessage.style.display = "none";
   loadingmessage.style.display = "block";
   sessionStorage.clear();
+  document.getElementById("showcase").innerHTML = "";
 }
 function submitPrompt() {
   const userInput = document.getElementById("prompt-input").value;
@@ -125,6 +126,10 @@ function submitPrompt() {
     // Display the input in the profile
     document.getElementById(category).classList.remove("hidden");
     document.getElementById(category + "-info").innerText = input;
+
+    // Append the input to the showcase
+    document.getElementById("showcase").innerHTML += `
+    <p><strong>${prompts[currentStep].category}</strong>: ${input}</p>`;  
 
     currentStep++;
 
@@ -147,12 +152,16 @@ function submitPrompt() {
 function goBack() {
   if (currentStep > 0) {
     currentStep--;
+    const category = prompts[currentStep].category;
+    const showcaseElement = document.getElementById("showcase");
+    // Remove the last entered data from the showcase
+    showcaseElement.removeChild(showcaseElement.lastElementChild);
     showPrompt();
   }
 }
 
 // Function to show profile-building elements after clicking the button
 document.getElementById("create-user").addEventListener("click", function () {
-  loadingmessage.classList.add("hidden");
+  loadingmessage.style.display = 'none';
   showPrompt();
 });
