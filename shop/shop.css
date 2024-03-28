@@ -39,7 +39,7 @@ body {
     flex-wrap: wrap;
 }
 .product {
-    height: 250px;
+    height: 300px;
     width: 250px;
     background-color: #f9f9f9; /* Light gray background */
     color: #000;
