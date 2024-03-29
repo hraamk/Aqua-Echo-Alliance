@@ -19,8 +19,7 @@ body {
 #text {
     position: absolute;
     font-size: 5vw; /* Responsive font size */
-    color: #fff;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adjust shadow as needed */
+    color: rgb(0, 125, 188); /* Adjust shadow as needed */
 }
 
 .parasec {
