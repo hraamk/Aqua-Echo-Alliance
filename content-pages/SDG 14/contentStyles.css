@@ -13,7 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85vh; /* Adjust as needed */
+    height: 100vh; /* Adjust as needed */
 }
 
 #text {
@@ -50,31 +50,20 @@ body {
 }
 
 .sec p {
-    font-size: 1.5vw; /* Responsive font size */
+    font-size: 20px; /* Responsive font size */
     color: #fff;
     font-weight: 300;
 }
 
 /* Example of media query for adjusting layout on smaller screens */
-@media (max-width: 768px) {
+@media (min-height: 768px) {
     .parallex {
-        height: 30vh; /* Adjust height for smaller screens */
+        height: 85vh; /* Adjust height for smaller screens */
     }
+}
 
-    #text {
-        font-size: 7vw; /* Adjust font size for smaller screens */
-    }
-
-    .sec {
-        padding: 10vw; /* Adjust padding for smaller screens */
-    }
-
-    .sec h2 {
-        font-size: 5vw; /* Adjust font size for smaller screens */
-        margin-bottom: 5vw; /* Adjust margin for smaller screens */
-    }
-
-    .sec p {
-        font-size: 2.5vw; /* Adjust font size for smaller screens */
+@media (max-height: 1080px) {
+    .parallex {
+        height: 90vh; /* Adjust height for smaller screens */
     }
 }
