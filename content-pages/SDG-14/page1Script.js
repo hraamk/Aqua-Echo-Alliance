@@ -12,13 +12,11 @@ window.addEventListener('scroll', () => {
 
     text.style.marginTop = value * 2.5 + 'px';
     plant1.style.left = value * -0.5 + 'px';
+    boat.style.left = value * -1.5 + 'px';
     boat.style.left = value * 1.5 + 'px';
     fish.style.left = value * -1.5 + 'px';
     plant2.style.left = value * 0.5 + 'px';
     hill.style.marginTop = value * 0.5 + 'px';
 
 
-
-
-
-});
+})
