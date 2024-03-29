@@ -13,7 +13,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Adjust as needed */
+    /* height: calc(100vh - 30px);  */
+    --aspect-height: calc(100vw / 2.13);
+    --height-parallax: min(100vh, var(--width-parallax));
+    height: calc(var(--height-parallax) - 30px);
+
+    /* 1920/900 = 2.13 */
 }
 
 #text {
