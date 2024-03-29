@@ -4,22 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aqua Echo Alliance</title>
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <header>
     <div class="logo">
-      <a href="../home/home.html" class><img src="../logo.png" alt="Aqua Echo Alliance Logo"></a>
+      <a href="/home/home.html" class><img src="/logo.png" alt="Aqua Echo Alliance Logo"></a>
     </div>
     <nav>
       <ul>
-        <li><a href="../home/home.html" class="active">Home</a></li>
-        <li><a href="../gallery/gallery.html">Gallery</a></li>
-        <li><a href="../shop/shop.html">Shop</a></li>
-        <li><a href="../profile/profile.html">Profile</a></li>
-        <li><a href="../feedback/feedback.html">Feedback</a></li>
-        <li><a href="../team/team.html">Team</a></li>
-        <li><a href="../sitemap/sitemap.html">Sitemap</a></li>
+        <li><a href="/home/home.html" class="active">Home</a></li>
+        <li><a href="/gallery/gallery.html">Gallery</a></li>
+        <li><a href="/shop/shop.html">Shop</a></li>
+        <li><a href="/profile/profile.html">Profile</a></li>
+        <li><a href="/feedback/feedback.html">Feedback</a></li>
+        <li><a href="/team/team.html">Team</a></li>
+        <li><a href="/sitemap/sitemap.html">Sitemap</a></li>
       </ul>
     </nav>
   </header>
@@ -32,7 +32,7 @@
             Your browser does not support the video tag.
         </video>
 
-        <div class="content">
+        <div class="content" id="content">
           <h1 class ="mission"> Our Mission </h1>
             <p>At Aqua Echo Alliance, we are committed to promoting ocean conservation and raising awareness about the importance of preserving marine ecosystems. We align with the UN Sustainable Development Goal 14: Life Below Water, aiming to protect and sustainably use the oceans, seas, and marine resources for sustainable development.</p>
             <a href="/profile/profile.html" class="join-button">Join Us</a>
@@ -55,21 +55,21 @@
     <section class="photos">
       <div class="picture">
         <div class="description">
-          <h3>120</h3>
+          <h3>45</h3>
           Beach<br>Cleanups
         </div>
         <img src="pic1.webp" alt="Beach Cleanup" > 
       </div>
       <div class="picture">
         <div class="description">
-          <h3>60K</h3>
-          Pounds of<br>Trash<br>Removed
+          <h3>900</h3>
+          Kilograms of<br>Trash<br>Removed
         </div>
         <img src="pic2.webp" alt="Pounds of Trash Removed"> 
       </div>
       <div class="picture">
         <div class="description">
-          <h3>600</h3>
+          <h3>60</h3>
           Volunteers
         </div>
         <img src="pic3.webp" alt="Volunteers"> 
@@ -81,7 +81,7 @@
       <h2>What we do</h2>
       <div class="gallery">
         <div class="tile" onclick="tileClicked(2)">
-          <a href="../content-pages/page2.html"><img src="thumb2.png" alt="Page 2"></a>
+          <a href="/content-pages/Beach-Cleanups/cleanup.html"><img src="thumb2.png" alt="Page 2"></a>
           <div class="whatwedo">Beach Cleanups</div><br>
           <div class="text">Beach cleanup: Removing litter to protect marine life and habitats, promoting awareness and responsible waste management.</div>
         </div>
@@ -91,7 +91,7 @@
           <div class="text">Raising awareness on : Save oceans. Protect marine life. Join the movement for a sustainable future.</div>
         </div>
         <div class="tile">
-          <a href="../content-pages/page4.html"><img src="thumb4.png" alt="Page 4"></a>
+          <a href="/content-pages/Building-a-Community/community.html"><img src="thumb4.png" alt="Page 4"></a>
           <div class="whatwedo">Building a Community</div><br>
           <div class="text">Building an SDG 14 community means uniting for ocean preservation. We combat pollution, promote sustainable fishing, and conserve marine life for a better future.</div>
         </div>
@@ -100,17 +100,50 @@
   </main>
 
   <footer>
-    <div>
+    <div class="footer-content">
+      <div class="footer-image">
+        <img id="footer-image" src="/logo-white.png"> 
+      </div>
+      <div class="footer-links">
+        <h4>Menu</h4>
+          <a href="/home/home.html">Home</a><br>
+          <a href="/shop/shop.html">Shop</a><br>
+          <a href="/profile/profile.html">Profile</a><br>
+          <a href="/feedback/feedback.html">Feedback</a><br>
+          <a href="/team/team.html">Team</a><br>
+          <a href="/sitemap/sitemap.html">Sitemap</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Our Content</h4>
+          <a href="/content-pages/SDG-14/page1.html">SDG 14 - Life Below Water</a><br>
+          <a href="/content-pages/Beach-Cleanups/cleanup.html">Beach Cleanups</a><br>
+          <a href="/content-pages/Raising Awareness/awarness.html">Raisng Awareness</a><br>
+          <a href="/content-pages/Building-a-Community/community.html">Building a Community</a><br>
+      </div>
+
+      <div class="footer-links">
+        <h4>Page Editor</h4>
+        This page is edited by Student 2 - Hariraam K<br>
+        <a href="../home/home.html" class="active">Link to page editor</a>
+      </div>
+    </div>
+    <div class="copyright">
       © 2024 Aqua Echo Alliance. All rights reserved.
     </div>
   </footer>
-
   <script>
+
+    let content = document.getElementById('content');
+    window.addEventListener('scroll', () => {
+    let value = window.scrollY;
+    content.style.marginTop = (100 + value * 0.5) + 'px';
+    })
+
     function tileClicked(tileNumber) {
       alert("Tile " + tileNumber + " clicked!");
       // You can add more actions here, such as displaying content or navigating to another page
     }
   </script>
-  
 </body>
 </html>
