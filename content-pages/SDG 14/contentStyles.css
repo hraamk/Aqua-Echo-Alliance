@@ -4,7 +4,7 @@
 }
 
 body {
-    background: #f9f9f9;
+    background: rgb(0, 125, 188);
     overflow-x: hidden;
 }
 
@@ -56,14 +56,3 @@ body {
 }
 
 /* Example of media query for adjusting layout on smaller screens */
-@media (min-height: 768px) {
-    .parallex {
-        height: 85vh; /* Adjust height for smaller screens */
-    }
-}
-
-@media (max-height: 1080px) {
-    .parallex {
-        height: 90vh; /* Adjust height for smaller screens */
-    }
-}
