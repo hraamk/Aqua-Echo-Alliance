@@ -4,7 +4,7 @@
 }
 
 body {
-    background: rgb(0, 125, 188);
+    background: rgb(255, 255, 255);
     overflow-x: hidden;
 }
 
@@ -19,7 +19,8 @@ body {
 #text {
     position: absolute;
     font-size: 5vw; /* Responsive font size */
-    color: rgb(0, 125, 188); /* Adjust shadow as needed */
+    color: rgb(255, 255, 255);
+ /* Adjust shadow as needed */
 }
 
 .parasec {
