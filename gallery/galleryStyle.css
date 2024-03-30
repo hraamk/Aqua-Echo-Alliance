@@ -21,6 +21,7 @@ body {
     height: 65vh;
     position: absolute;
     top: 20%;
+    transform: translate(200%, 0%);
     border-radius: 20px;
     /*box-shadow: 0 30px 50px #505050;  */
     background-position: 50% 50%;
@@ -62,7 +63,7 @@ body {
 
 .item .content {
     position: absolute;
-    top: 50%;
+    top: 15%;
     left: 100px;
     width: 300px;
     text-align: left;
@@ -72,12 +73,23 @@ body {
     display: none;
 }
 
-/* Ensure content animation is applied */
-.content .name,
-.content .des {
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
     opacity: 0;
-    animation: animate 1s ease-in-out 1 forwards, animate 1s ease-in-out 0.3s 1 forwards;
+    animation: animate 1s ease-in-out 1 forwards;
 }
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+/* Ensure content animation is applied */
+
 
 /* Define keyframe animation */
 @keyframes animate {

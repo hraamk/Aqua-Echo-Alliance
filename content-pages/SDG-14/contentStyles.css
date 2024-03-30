@@ -6,6 +6,7 @@
 body {
     background: rgb(255, 255, 255);
     overflow-x: hidden;
+    padding-top: 60px;
 }
 
 .parallex {
@@ -13,6 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(194, 234, 254);
     /* height: calc(100vh - 30px);  */
     --aspect-height: calc(100vw / 2.13);
     --height-parallax: min(100vh, var(--aspect-height));
@@ -41,23 +43,42 @@ body {
     pointer-events: none;
 }
 
-.sec {
+.sec1 {
     position: relative;
     line-height: 150%;
     background-color: rgb(0, 125, 188);
     padding: 5vw; /* Responsive padding */
 }
 
-.sec h2 {
-    font-size: 3vw; /* Responsive font size */
+.sec1 h2 {
+    font-size: 40px; /* Responsive font size */
     color: #fff;
     margin: 0 0 3vw; /* Responsive margin */
 }
 
-.sec p {
+.sec1 p {
     font-size: 20px; /* Responsive font size */
     color: #fff;
     font-weight: 300;
 }
 
+.sec2 {
+    position: relative;
+    line-height: 150%;
+    background-color: rgb(255, 255, 255);
+    padding: 5vw; /* Responsive padding */
+}
+
+.sec2 h2 {
+    font-size: 40px; /* Responsive font size */
+    color: rgb(0, 125, 188);
+    margin: 0 0 3vw; /* Responsive margin */
+}
+
+.sec2 p {
+    font-size: 20px; /* Responsive font size */
+    color: #000;
+    font-weight: 300;
+    overflow: hidden;
+}
 /* Example of media query for adjusting layout on smaller screens */
