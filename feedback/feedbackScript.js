@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const feedbackForm = document.getElementById('feedback-form');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
-    const ratingInput = document.getElementById('rating'); // Assuming rating input exists
-    const commentInput = document.getElementById('comment');
+    const commentInput = document.getElementById('improvement');
+    const ratingInputs = document.querySelectorAll('input[name="rating"]');
     const previewDiv = document.getElementById('preview');
     const confirmationDiv = document.getElementById('confirmation');
 
@@ -27,13 +27,40 @@ document.addEventListener("DOMContentLoaded", function() {
             displayErrorMessage('comment', 'Comment is required');
             isValid = false;
         }
+        let ratingValue = '';
+        ratingInputs.forEach(input => {
+            if (input.checked) {
+                ratingValue = input.value;
+            }
+        });
+
+        if (ratingValue === '') {
+            displayErrorMessage('rating', 'Please select a rating');
+            isValid = false;
+        }
+
+        // Check if the user found the website informative and easy to navigate through
+        const convYesInput = document.getElementById('yes-conv');
+        if (convYesInput && convYesInput.checked) {
+            // If yes, set a default value for the comment field
+            commentInput.value = "I am satisfied with the website";
+
+            // Remove error message for this question
+            const convErrorMessage = document.getElementById('conv-error');
+            if (convErrorMessage) {
+                convErrorMessage.textContent = ''; // Clear error message
+            }
+        } else {
+            // If the user didn't find the website informative, mark the form as invalid
+            isValid = false;
+        }
 
         if (isValid) {
             // Store form data in sessionStorage
             sessionStorage.setItem('feedbackData', JSON.stringify({
                 name: nameInput.value.trim(),
                 email: emailInput.value.trim(),
-                //rating: ratingInput.value.trim(), // Assuming rating input exists
+                rating: ratingValue,
                 comment: commentInput.value.trim()
             }));
 
