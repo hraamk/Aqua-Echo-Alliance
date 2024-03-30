@@ -9,8 +9,10 @@ header {
     top: 0;
     width: 100%;
     background-color: rgb(255, 255, 255); /* Ocean blue */
+    opacity: 80%;
     padding: 15px 0;
     display: flex;
+    backdrop-filter: blur(15px);
     justify-content: space-between;
     align-items: center;
     z-index: 999;
@@ -19,7 +21,6 @@ header {
   }
 
   body{
-    margin-top: 100px;
     animation: fadeInBackground 1.2s ease-in-out forwards;
 
   }
@@ -28,6 +29,7 @@ header {
     width: 150px; /* Adjust logo size as needed */
     padding-left: 50px;
   }
+  
 
   nav ul {
     list-style-type: none;
@@ -62,11 +64,11 @@ header {
   .content {
     position: relative;
     font-size: x-large;
+    margin-top: 100px;
     z-index: 1; /* Ensure content is above the video */
     color: #fff; /* Example text color */
     text-align: center; /* Example alignment */
     padding: 20px;
-    padding-top: 60px;
     animation: animate 1s ease-in-out 0.3s 1 forwards;
   }
   
