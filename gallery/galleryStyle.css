@@ -1,35 +1,37 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
-body{
+body {
     background-image: url(../bg.jpeg);
-    overflow: hidden;
+    overflow-x: hidden;
+    margin: 0; /* Reset default body margin */
+    padding: 0; /* Reset default body padding */
 }
 
-.container{
-    height: 50vh;
-    width: 100%;
+.container {
+    min-height: 100vh; /* Ensure container covers at least the viewport height */
+    position: relative; /* Ensure positioning context for absolutely positioned children */
 }
 
-
-.container .slide .item{
+.container .slide .item {
     width: 200px;
     height: 65vh;
     position: absolute;
-    top: 50%;
-    transform: translate(200%, -50%);
+    top: 20%;
     border-radius: 20px;
-    box-shadow: 0 30px 50px #505050;
+    /*box-shadow: 0 30px 50px #505050;  */
     background-position: 50% 50%;
     background-size: cover;
     display: inline-block;
     transition: 0.5s;
 }
 
+/* Adjust positioning for first and second gallery items */
 .slide .item:nth-child(1),
-.slide .item:nth-child(2){
+.slide .item:nth-child(2) {
     top: 0;
     left: 0;
     transform: translate(0, 0);
@@ -38,26 +40,27 @@ body{
     height: 100%;
 }
 
-
-.slide .item:nth-child(3){
+/* Adjust positioning for subsequent gallery items */
+.slide .item:nth-child(3) {
     left: 50%;
 }
-.slide .item:nth-child(4){
+.slide .item:nth-child(4) {
     left: calc(50% + 220px);
 }
-.slide .item:nth-child(5){
+.slide .item:nth-child(5) {
     left: calc(50% + 440px);
 }
-
-/* here n = 0, 1, 2, 3,... */
-.slide .item:nth-child(n + 6){
+.slide .item:nth-child(n + 6) {
     left: calc(50% + 660px);
     opacity: 0;
 }
 
+/* Ensure content is displayed for the second gallery item */
+.slide .item:nth-child(2) .content {
+    display: block;
+}
 
-
-.item .content{
+.item .content {
     position: absolute;
     top: 50%;
     left: 100px;
@@ -69,40 +72,33 @@ body{
     display: none;
 }
 
-
-.slide .item:nth-child(2) .content{
-    display: block;
-}
-
-
-.content .name{
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: bold;
+/* Ensure content animation is applied */
+.content .name,
+.content .des {
     opacity: 0;
-    animation: animate 1s ease-in-out 1 forwards;
+    animation: animate 1s ease-in-out 1 forwards, animate 1s ease-in-out 0.3s 1 forwards;
 }
 
-.content .des{
-    margin-top: 10px;
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: animate 1s ease-in-out 0.3s 1 forwards;
+/* Define keyframe animation */
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Adjust animation as needed */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-
-
-
-
-
-.button{
-text-align: center;
+.button {
+    text-align: center;
     width: 100%;
     position: absolute;
     bottom: 20px;
 }
 
-.button button{
+.button button {
     width: 40px;
     height: 35px;
     border-radius: 8px;
@@ -113,7 +109,7 @@ text-align: center;
     transition: 0.3s;
 }
 
-.button button:hover{
+.button button:hover {
     background: #000000;
     color: #fff;
 }
