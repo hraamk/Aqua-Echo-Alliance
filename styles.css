@@ -75,7 +75,7 @@ header {
   
   .mission {
     text-align: center;
-    font-size: 200%;
+    font-size: 7rem;
     
   }
 
@@ -94,6 +94,7 @@ header {
 
     
   }
+
 
   .description {
     width: 33.3%;
@@ -118,8 +119,14 @@ header {
     animation: animate 1s ease-in-out 0.3s 1 forwards;
   }
 
+  @media screen and (max-width: 768px) {
+    .sdglogo {
+      display: none;
+    }
+  }
+
   .introduction{
-    flex: 2;
+
     line-height: 180%;
     text-align: center;
     color: #fff;
@@ -170,10 +177,11 @@ header {
 
 .intro{
   height: 75vh;
-  width: 100%;
   display: flex;
   background-color: rgb(0, 125, 188);
-  border-radius: 20px;
+  overflow: hidden;
+
+
 }
 
 .whatwedo{
@@ -206,9 +214,12 @@ header {
   width: 25%;
   height: fit-content;
   margin: 10px;
+  padding-bottom: 2%;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adding box-shadow transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform-style: preserve-3d;
+  box-sizing: border-box; 
+  overflow-x:hidden ;
 }
 
 
@@ -329,6 +340,7 @@ header {
   }
   
   .photos {
+    background-color: #e9e9e9;
     display: flex;
     overflow: hidden; 
     position: relative; 
@@ -339,6 +351,25 @@ header {
     margin-top: 5%;
     display: flex;
     gap: 3%;
+    overflow-x: hidden;
+  }
+
+  .card {
+    background-color: #fff; /* White background for the card */
+    color: #1075e1d2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    padding: 20px; /* Add padding for spacing */
+    margin-top: 20px; /* Add spacing between .intro and .card */
+  }
+
+  .infocards{
+    display: flex;
+    gap: 3%;
+  }
+
+  .card:hover {
+    background-color: #1075e1d2; 
   }
 
   
