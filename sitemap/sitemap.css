@@ -1,0 +1,16 @@
+body{
+
+    /* backdrop-filter: blur(2px); */
+}
+  
+rect {
+    transition: transform 0.2s ease;
+}
+
+rect:hover {
+    transform: scale(1.1);
+    background-color: blue;
+}
+
+
+
