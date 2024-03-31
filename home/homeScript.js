@@ -8,3 +8,5 @@ let content = document.getElementById('content');
       alert("Tile " + tileNumber + " clicked!");
       // You can add more actions here, such as displaying content or navigating to another page
     }
+
+    

@@ -135,13 +135,14 @@ header {
   .content-links {
     margin-top: 20px;
     text-align: center;
+    height: 700px;
   }
   
   .gallery {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-bottom: 120px;
+    
   }
   
   .gallery a {
@@ -170,8 +171,10 @@ header {
 
 .intro{
   height: 75vh;
+  width: 100%;
   display: flex;
   background-color: rgb(0, 125, 188);
+  border-radius: 20px;
 }
 
 .whatwedo{
@@ -202,12 +205,13 @@ header {
 
 .tile {
   width: 25%;
-  height: 300px;
+  height: fit-content;
   margin: 10px;
-  float: left;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adding box-shadow transition */
+  transform-style: preserve-3d;
 }
+
 
 .tile .text{
   color: #000;
@@ -218,7 +222,8 @@ header {
 
 /* Hover effect */
 .tile:hover {
-  transform: scale(1.1);
+  transform: translateY(-5px); /* Lift the box */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .join-button {
@@ -313,6 +318,7 @@ header {
   
   /* Footer styles */
   footer {
+    position: relative;
 
     background-color: rgb(0, 125, 188); /* Ocean blue */
     width: 100%;
@@ -322,4 +328,18 @@ header {
     border-top-right-radius: 20px;
     
   }
+  
+  .photos {
+    display: flex;
+    overflow: hidden; 
+    position: relative; 
+    justify-content: center; 
+  }
+  
+  .picture-container {
+    margin-top: 5%;
+    display: flex;
+    gap: 3%;
+  }
+
   
