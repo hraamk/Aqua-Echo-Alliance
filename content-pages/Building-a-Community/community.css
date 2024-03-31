@@ -1,0 +1,89 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+
+/* Section styles */
+/* Section styles */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto 30px; /* Center the section horizontally */
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+    height: 50vh;
+    background-color: #007bff; /* Dark blue background color */
+    color: #333; /* White text color */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #007bff; /* Border color */
+}
+
+/* Adjustments for specific sections */
+
+
+#what-we-do {
+
+    background-color: #3498db; /* Medium blue background color */
+    border-color: #3498db; /* Border color */
+   
+}
+
+#join-community {
+    background-color: #5dade2; /* Light blue background color */
+    border-color: #5dade2; /* Border color */
+}
+
+#make-a-difference {
+
+    background-color: #85c1e9; /* Lighter blue background color */
+    border-color: #85c1e9; /* Border color */
+}
+
+
+
+
+
+section h2 {
+    color: #ffffffa7;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+section p {
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style-type: none;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+section ul li {
+    margin-bottom: 5px;
+}
+
+
+
