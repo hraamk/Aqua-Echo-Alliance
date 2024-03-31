@@ -13,6 +13,7 @@ body {
 .container {
     max-width: 100%;
     margin: 0 auto;
+    margin-top: 50px;
     padding: 50px 30px;
     display: flex;
     flex-direction: column;
@@ -60,7 +61,8 @@ body {
 }
 
 .product:hover {
-    transform: scale(1.05); /* Scale up on hover to make it stand out */
+    transform: scale(1.05);
+    border: 1px solid rgb(0, 125, 188); /* Scale up on hover to make it stand out */
 }
 
 .product h2,

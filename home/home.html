@@ -125,25 +125,13 @@
       <div class="footer-links">
         <h4>Page Editor</h4>
         This page is edited by Student 2 - Hariraam K<br>
-        <a href="../home/home.html" class="active">Link to page editor</a>
+        <a href="/pageEditor/hariraam.html" target="_blank">Link to page editor</a>
       </div>
     </div>
     <div class="copyright">
       © 2024 Aqua Echo Alliance. All rights reserved.
     </div>
   </footer>
-  <script>
-
-    let content = document.getElementById('content');
-    window.addEventListener('scroll', () => {
-    let value = window.scrollY;
-    content.style.marginTop =  (value * 0.5 + 100) + 'px';
-    })
-
-    function tileClicked(tileNumber) {
-      alert("Tile " + tileNumber + " clicked!");
-      // You can add more actions here, such as displaying content or navigating to another page
-    }
-  </script>
+  <script src="homeScript.js"> </script>
 </body>
 </html>

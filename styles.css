@@ -9,18 +9,19 @@ header {
     top: 0;
     width: 100%;
     background-color: rgb(255, 255, 255); /* Ocean blue */
-    opacity: 80%;
+    opacity: 90%;
     padding: 15px 0;
     display: flex;
-    backdrop-filter: blur(15px);
     justify-content: space-between;
     align-items: center;
     z-index: 999;
-    border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 30px;
     border-bottom-right-radius: 20px;
   }
 
   body{
+    margin-top: 0px;
+    margin-bottom: 0px;
     animation: fadeInBackground 1.2s ease-in-out forwards;
 
   }
@@ -64,7 +65,7 @@ header {
   .content {
     position: relative;
     font-size: x-large;
-    margin-top: 100px;
+    margin-top: 150px;
     z-index: 1; /* Ensure content is above the video */
     color: #fff; /* Example text color */
     text-align: center; /* Example alignment */
@@ -140,7 +141,7 @@ header {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 120px;
   }
   
   .gallery a {
@@ -148,7 +149,7 @@ header {
   }
   
   .gallery img {
-    max-width: 200px; /* Adjust thumbnail size as needed */
+    max-width: 250px; /* Adjust thumbnail size as needed */
   }
 
   .learnmore{
@@ -175,6 +176,7 @@ header {
 
 .whatwedo{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
   color: rgb(0, 125, 188);
 }
 
@@ -209,7 +211,7 @@ header {
 
 .tile .text{
   color: #000;
-  margin-top: 15px;
+
 }
 
 
@@ -268,6 +270,12 @@ header {
 
 .footer-links a{
   color:#fff;
+  text-decoration: none;
+
+}
+
+.footer-links a:hover{
+  text-decoration: underline;
 
 }
 

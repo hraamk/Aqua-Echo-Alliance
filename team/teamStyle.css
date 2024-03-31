@@ -5,7 +5,6 @@
 }
 
 body{
-    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
@@ -13,6 +12,7 @@ body{
 }
 
 .wrapper{
+    margin-top: 70px;
     box-sizing: border-box;
 }
 
@@ -44,8 +44,8 @@ body{
 
 .card_Container .card{
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 20vw;
+    height: calc(20vw/3*4);
     margin: 20px;
     overflow: hidden;
     box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 1),
@@ -65,7 +65,7 @@ body{
     position: absolute;
     bottom: -160px;
     width: 100%;
-    height: 50px;
+    height: calc(20vw/3.5);
     display: flex;
     justify-content: center;
     align-items: center;
