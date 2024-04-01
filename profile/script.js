@@ -71,7 +71,7 @@ const prompts = [
 
 
 function showPrompt() {
-  console.log("buhhhiujhuhi")
+
   promptmessage.style.display = "flex";
   document.getElementById("custom-prompt").classList.remove("hidden");
   document.getElementById("prompt-content").innerHTML = `

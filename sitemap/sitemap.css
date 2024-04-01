@@ -1,16 +1,20 @@
 body{
 
-    /* backdrop-filter: blur(2px); */
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: auto;
 }
   
-rect {
-    transition: transform 0.2s ease;
+
+.hover-rect {
+    transition: all 0.3s ease;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3)); /* Adding box shadow */
+    stroke-width: 3; /* Increase stroke width for thicker outlines */
 }
 
-rect:hover {
-    transform: scale(1.1);
-    background-color: blue;
+.hover-rect:hover {
+    fill: rgb(136, 148, 211); /* Change color on hover */
+    stroke: black; /* Add black outline */
+    transform: translateY(2px); /* Move the rectangle down slightly for 3D effect */
 }
-
-
-

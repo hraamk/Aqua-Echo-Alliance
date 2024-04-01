@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const basketList = document.getElementById('basket-list');
     const totalElement = document.getElementById('total');
     const payhere = document.getElementById('to_checkout_btn');
-    const waiting_prompt = document.getElementById('waiting-prompt');
     const productsGrid = document.querySelector('.products-grid');
     const basket = document.getElementById('basket');
 
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
         productsGrid.style.flex = '0 0 100%';
     }
 
-    // Sample products data
     const products = [
         { id: 1, name: "Cup", price: 40, image: "productImages/cup.jpg" },
         { id: 2, name: "Hoodie", price: 110, image: "productImages/hoodie.jpg" },
