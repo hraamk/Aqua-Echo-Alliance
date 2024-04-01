@@ -1,6 +1,5 @@
  *{
-  margin-right: 0;
-  margin-left: 0;
+  margin: 0;
   font-family: 'Poppins', sans-serif;
 }/* External CSS file for overall website styling */
 /* Header styles */
@@ -20,7 +19,6 @@ header {
   }
 
   body{
-    margin-top: 0px;
     background-color: #011526;
     margin-bottom: 0px;
     animation: fadeInBackground 1.2s ease-in-out forwards;
@@ -65,20 +63,21 @@ header {
 
   .content {
     position: relative;
-    font-size: x-large;
-    margin-top: 150px;
+    font-size: 1.3rem;
+    margin-top: 30%;
     z-index: 1; /* Ensure content is above the video */
     color: #fff; /* Example text color */
     text-align: center; /* Example alignment */
-    padding: 20px;
+    padding: 5% 10%;
     animation: animate 1s ease-in-out 0.3s 1 forwards;
   }
   
   .mission {
     text-align: center;
-    font-size: 7rem;
+    font-size: 4rem;
+    margin-bottom: 5%;
     
-  }
+  } 
 
 
 
@@ -140,7 +139,6 @@ header {
   background-color: rgb(0, 125, 188);
   overflow: hidden;
 
-
 }
 
 
@@ -164,6 +162,7 @@ header {
 
 
 .join-button {
+  margin-top: 5%;
   font-size: 15px;
   display: inline-block;
   padding: 12px 24px;
@@ -296,7 +295,7 @@ header {
 
   .tile{
     display: flex;
-    background-color: white;
+    background-color: #F2F2F2;
     padding: 10%;
     height: 30vh;
     border-radius: 20px;
