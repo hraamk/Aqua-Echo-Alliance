@@ -102,7 +102,7 @@ header {
 
   
   #sdglogo{
-    height:60vh;
+    height:30vh;
     animation: animate 1s ease-in-out 0.3s 1 forwards;
   }
 
@@ -162,13 +162,6 @@ header {
   object-fit: cover;
 }
 
-
-
-/* Hover effect */
-.tile:hover {
-  transform: translateY(-5px); /* Lift the box */
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-}
 
 .join-button {
   font-size: 15px;
@@ -262,6 +255,7 @@ header {
   
   /* Footer styles */
   footer {
+    display: none;
     position: relative;
     background-color: #011C40; /* Ocean blue */
     width: 100%;
@@ -291,11 +285,39 @@ header {
     background-color: #1075e1d2; 
   }
 
-  .links{
+  .links {
     display: flex;
     flex-direction: column;
+    align-items: center;  /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    margin: 10% auto;
+    gap: 10vh;
   }
 
   .tile{
     display: flex;
+    background-color: white;
+    padding: 10%;
+    height: 30vh;
+    border-radius: 20px;
+    width: 60%;
+    justify-content: space-between;
+
   }
+
+  .tilecontent{
+    color:black;
+    align-content: center;
+    max-width: 230px;
+  }
+
+  /* Hover effect */
+.tile:hover {
+  transform: translateY(-5px); /* Lift the box */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tileimg{
+  justify-content: center;
+  align-content: center;
+}
