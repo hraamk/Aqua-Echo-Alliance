@@ -1,20 +1,39 @@
-body{
+   
+        /* Style for the link text */
+        text {
+            pointer-events: none; /* Ensure text doesn't interfere with hover */
+        }
 
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    margin: auto;
-}
-  
+        /* Default style for the rectangle */
+        .hover-rect {
+            transition: fill 0.3s ease-in-out; /* Adding transition for smooth color change */
+            fill: beige; /* Default fill color */
+        }
 
-.hover-rect {
-    transition: all 0.3s ease;
-    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3)); /* Adding box shadow */
-    stroke-width: 3; /* Increase stroke width for thicker outlines */
-}
-
-.hover-rect:hover {
-    fill: rgb(136, 148, 211); /* Change color on hover */
-    stroke: black; /* Add black outline */
-    transform: translateY(2px); /* Move the rectangle down slightly for 3D effect */
-}
+        /* Style for the rectangle when hovered */
+        .hover-rect:hover {
+            fill: aqua; /* Fill color on hover */
+            animation: glow 5s infinite alternate; /* Apply the glow animation */
+        }
+        @keyframes glow {
+            0% { 
+              fill: aqua;
+              box-shadow: 0 0 5px aqua;
+            }
+            25% { 
+              fill: rgb(48, 0, 206);
+              box-shadow: 0 0 20px rgb(48, 0, 206);
+            }
+            50% { 
+              fill: rgb(255, 130, 4);
+              box-shadow: 0 0 30px rgb(255, 130, 4);
+            }
+            75% { 
+              fill: aqua;
+              box-shadow: 0 0 20px aqua;
+            }
+            100% { 
+              fill: aqua;
+              box-shadow: 0 0 5px aqua;
+            }
+          }
