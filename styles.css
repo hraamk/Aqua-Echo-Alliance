@@ -124,12 +124,7 @@ header {
   }
 
   
-  .content-links {
-    margin-top: 20px;
-    text-align: center;
-    height: 700px;
-  }
-  
+
 
 
 
@@ -254,7 +249,6 @@ header {
   
   /* Footer styles */
   footer {
-    display: none;
     position: relative;
     background-color: #011C40; /* Ocean blue */
     width: 100%;
@@ -294,6 +288,7 @@ header {
   }
 
   .tile{
+    margin-top: 3%;
     display: flex;
     background-color: #F2F2F2;
     padding: 10%;
@@ -319,4 +314,11 @@ header {
 .tileimg{
   justify-content: center;
   align-content: center;
+}
+
+.links {
+  background-image: url('/home/BG1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin:0;
 }
