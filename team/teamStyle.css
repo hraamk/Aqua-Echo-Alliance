@@ -8,7 +8,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 80vh;
-    background: #022859;
+    background-image: url(teamBg.png);
 }
 
 .wrapper{
@@ -20,15 +20,12 @@ body{
     text-align: center;
 }
 
-.title h4{
+.title h1{
     display: inline-block;
     padding: 20px;
     color: #ffffff;
-    font-size: 40px;
-    font-weight: 500;
     letter-spacing: 1.2px;
     word-spacing: 5px;
-    text-transform: uppercase;
     backdrop-filter: blur(15px);
     word-wrap: break-word;
 }

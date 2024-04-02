@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url(../bg.jpeg);
+  background-image: url(profileBg.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -12,6 +12,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 30%;
   transform: translate(-50%, -50%);
   text-align: center;
   background-color: #ffffff; /* Background color */
@@ -37,6 +38,10 @@ body {
   border-radius: 5px;
 }
 
+.profile-intro{
+  padding-bottom: 20px;
+}
+
 #create-user:hover {
   background-color: #0056b3; /* Button background color on hover */
 }
@@ -51,10 +56,12 @@ body {
 }
 
 #profile {
+  text-align: center;
   border: 1px solid #ccc;
   padding: 20px;
   margin: 15%;
   background-color: #fff;
+  border-radius: 30px;
 }
 
 #profile p {
@@ -89,7 +96,7 @@ body {
   border-radius: 5px;
   margin-top: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  max-width: 400px; /* Set the maximum width */
+  max-width: 30vw; /* Set the maximum width */
   width: 100%; /* Ensure it takes full width within the maximum width constraint */
   word-wrap: break-word;
 }
@@ -104,7 +111,7 @@ body {
 
 #prompt-content {
   background-color: #fff;
-  width: 300px;
+  width: 30vw;
   padding: 20px;
   border-radius: 5px;
 }
