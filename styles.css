@@ -257,51 +257,34 @@ header {
   }
   
 
-  .card {
-    background-color: #fff; /* White background for the card */
-    color: #1075e1d2;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
-    padding: 20px; /* Add padding for spacing */
-    margin-top: 20px; /* Add spacing between .intro and .card */
-  }
-
-  .infocards{
-    display: flex;
-    gap: 3%;
-  }
-
-  .card:hover {
-    background-color: #1075e1d2; 
-  }
 
   .links {
     display: flex;
     flex-direction: column;
     align-items: center;  /* Center content horizontally */
     justify-content: center; /* Center content vertically */
-    margin:  auto;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    gap: 5vh; 
     background-image: url('/home/BG1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-  
+    overflow-x: hidden;
+    
+
   }
 
   .tile {
     display: flex;
     background-color: #F2F2F2;
-    padding: 20px; /* Adjust padding as needed */
     height: 50vh; /* Adjust height to fit content */
-    width: 60%; /* Adjust maximum width to maintain aspect ratio */
+    width: 100%;
     justify-content: space-between; /* Aligns items at the start and end, with equal space in between */
-    border-radius: 20px;
     align-items: center; /* Vertically aligns items in the center */
-    gap: 6vh;
+    margin: 2vh;
+    border-radius: 20px;
   }
   
+  .tile:hover {
+    background-color: #D9D9D9; /* Change background color on hover */
+}
   .tilecontent {
     width: calc(100% - 300px); /* Calculate width for content */
     max-width: calc(100% - 300px); /* Adjust max-width for content */
@@ -312,9 +295,25 @@ header {
     flex-shrink: 0; /* Prevent image from shrinking */
   }
   
-  /* Hover effect */
-  .tile:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-  }
   
+  .twocontent{
+    display: flex;
+  }
+
+  .shop{
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+  }
+  .shop img {
+    width: 50%;
+    height: auto; /* Maintain aspect ratio */
+}
+.shop button{
+  height: 10vh;
+  width: 20vw;
+  border-radius: 20px;
+  background-color: #0077cc;
+}

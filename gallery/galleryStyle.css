@@ -67,6 +67,7 @@ body {
     position: absolute;
     color: #eee;
     font-family: system-ui;
+    display: none;
 
 }
 
