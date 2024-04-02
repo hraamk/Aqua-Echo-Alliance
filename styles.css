@@ -284,25 +284,23 @@ header {
     align-items: center;  /* Center content horizontally */
     justify-content: center; /* Center content vertically */
     margin: 10% auto;
-    gap: 10vh;
+ 
   }
 
   .tile{
-    margin-top: 3%;
     display: flex;
     background-color: #F2F2F2;
-    padding: 10%;
+    padding: 20%;
     height: 30vh;
-    border-radius: 20px;
-    width: 60%;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: space-around;
 
   }
 
   .tilecontent{
     color:black;
     align-content: center;
-    max-width: 230px;
+    max-width: 500px;
   }
 
   /* Hover effect */
