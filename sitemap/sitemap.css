@@ -4,6 +4,12 @@
             pointer-events: none; /* Ensure text doesn't interfere with hover */
         }
 
+        body{
+          display: flex;
+          justify-content: center;
+          background-color: #000;
+        }
+
         /* Default style for the rectangle */
         .hover-rect {
             transition: fill 0.3s ease-in-out; /* Adding transition for smooth color change */
@@ -37,3 +43,11 @@
               box-shadow: 0 0 5px aqua;
             }
           }
+
+          h1{
+            font-size: 20px;
+            color: #fff;
+          }
+
+          
+          

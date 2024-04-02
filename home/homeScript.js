@@ -4,10 +4,6 @@ let content = document.getElementById('content');
     content.style.marginTop =  (value * 0.5 + 200) + 'px';
     })
 
-    function tileClicked(tileNumber) {
-      alert("Tile " + tileNumber + " clicked!");
-      // You can add more actions here, such as displaying content or navigating to another page
-    }
 
 // Function to check if the element is in the viewport
 function isInViewport(element) {

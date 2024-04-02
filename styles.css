@@ -90,18 +90,7 @@ header {
   }
 
 
-  
-  #sdglogo{
-    padding-left:20px ;
-    height:30vh;
-    animation: animate 1s ease-in-out 0.3s 1 forwards;
-  }
 
-  @media screen and (max-width: 768px) {
-    .sdglogo {
-      display: none;
-    }
-  }
 
   .introduction{
     line-height: 180%;
@@ -114,9 +103,9 @@ header {
     
   }
 
-  
-
-
+  .whatwedo{
+    font-size: 30px;
+  }
 
 
 .intro{
@@ -151,6 +140,7 @@ header {
   margin-top: 5%;
   font-size: 15px;
   display: inline-block;
+  text-align: center;
   padding: 12px 24px;
   background-color: #0077cc;
   color: #fff;
@@ -158,6 +148,13 @@ header {
   border-radius: 999px;
   transition: background-color 0.3s ease;
   border: none;
+}
+
+.join-button:hover {
+  transform: scale(110%);
+  transition: transform 0.3s ease;
+
+
 }
 
 .footer-content{
@@ -271,7 +268,7 @@ header {
 
   .tile {
     display: flex;
-    background-color: #F2F2F2;
+    background-color: #ffffff;
     height: 50vh; /* Adjust height to fit content */
     width: 100%;
     justify-content: space-between; /* Aligns items at the start and end, with equal space in between */
@@ -280,9 +277,6 @@ header {
     border-radius: 20px;
   }
   
-  .tile:hover {
-    background-color: #D9D9D9; /* Change background color on hover */
-}
   .tilecontent {
     width: calc(100% - 300px); /* Calculate width for content */
     max-width: calc(100% - 300px); /* Adjust max-width for content */
@@ -298,14 +292,14 @@ header {
     flex-shrink: 0; /* Prevent image from shrinking */
   }
   
-  
   .twocontent{
     display: flex;
   }
 
   .shop{
     display: flex;
-    width: 95vw;
+    width: 88vw;
+    border-radius: 30px;
     justify-content: space-around;
     align-items: center;
     background-color: #fff;
@@ -324,5 +318,5 @@ header {
   color: #fff;
 }
 .shop .col h1{
-  font-size: 5rem;
+  font-size: 3rem;
 }
