@@ -3,9 +3,11 @@ body {
   padding: 0;
   background-image: url(../bg.jpeg);
   background-size: cover;
-  
+  background-repeat: no-repeat;
 }
-
+.container{
+  height: 100vh;
+}
 #loading-message {
   position: absolute;
   top: 50%;
@@ -51,7 +53,7 @@ body {
 #profile {
   border: 1px solid #ccc;
   padding: 20px;
-  margin-bottom: 20px;
+  margin: 15%;
   background-color: #fff;
 }
 
@@ -67,7 +69,7 @@ body {
   display: none;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 30vh;
 }
 
 #custom-prompt {
@@ -189,4 +191,3 @@ body {
   background-color: #007bff;
   color: #ffffff;
 }
-

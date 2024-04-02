@@ -79,7 +79,7 @@ function showPrompt() {
     <label for="prompt-input">${prompts[currentStep].prompt}</label>
     <input type="text" id="prompt-input">
     <div class="button-container">
-    <button id="submit-button" onclick="submitPrompt()">Submit</button>
+    <button id="submit-button" onclick="submitPrompt()">Next</button>
     <button id="cancel-button" onclick="cancelPrompt()">Cancel</button>
     <button id="back-button" onclick="goBack()">Back</button>
   </div>
