@@ -4,9 +4,9 @@
 }
 
 body {
-     /* White background */ /* Black text color */
     margin: 0;
     padding: 0;
+    background-image: url(shopBg.png);
 }
 
 .container {
@@ -17,6 +17,14 @@ body {
     display: flex;
     flex-direction: column;
     animation: fadeInBackground 1s ease-in-out forwards;
+}
+
+
+
+.container h1{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
 }
 @keyframes fadeInBackground {
     from {
