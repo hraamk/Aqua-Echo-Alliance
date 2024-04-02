@@ -64,7 +64,7 @@ header {
   .content {
     position: relative;
     font-size: 1.3rem;
-    margin-top: 30%;
+    margin-top: 200px;
     z-index: 1; /* Ensure content is above the video */
     color: #fff; /* Example text color */
     text-align: center; /* Example alignment */
@@ -78,6 +78,14 @@ header {
     margin-bottom: 5%;
     
   } 
+
+  #tile1, #tile3{
+    background-color: #022859;
+  }
+
+  #tile2, #tile4{
+    background-color: #011C40;
+  }
 
 
 
@@ -250,7 +258,7 @@ header {
   /* Footer styles */
   footer {
     position: relative;
-    background-color: #011C40; /* Ocean blue */
+    background-color: #011526; /* Ocean blue */
     width: 100%;
     color: #ffffff;
     padding: 10px 0;

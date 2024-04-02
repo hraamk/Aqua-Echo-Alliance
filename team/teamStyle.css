@@ -8,7 +8,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 80vh;
-    background: #ffffff;
+    background: #022859;
 }
 
 .wrapper{
@@ -23,7 +23,7 @@ body{
 .title h4{
     display: inline-block;
     padding: 20px;
-    color: #585757;
+    color: #ffffff;
     font-size: 40px;
     font-weight: 500;
     letter-spacing: 1.2px;
@@ -42,7 +42,7 @@ body{
     margin: 40px 0;
 }
 
-.card_Container .card{
+.card_Container .teamcard{
     position: relative;
     width: 20vw;
     height: calc(20vw/3*4);
@@ -61,24 +61,23 @@ body{
     height: 100%;
 }
 
-.card .content{
+.teamcard .content{
     position: absolute;
     bottom: -160px;
     width: 100%;
-    height: calc(20vw/3.5);
+    height: calc(20vw/3);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     backdrop-filter: blur(15px);
     box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     transition: bottom 0.5s;
     transition-delay: 0.65s;
 }
 
-.card:hover .content{
+.teamcard:hover .content{
     bottom: 0;
     transition-delay: 0s;
 }
@@ -86,7 +85,7 @@ body{
 .content .contentBx h3{
     text-transform: uppercase;
     margin-bottom: 30px;
-    color: #fff;
+    color: #ffffff;
     letter-spacing: 2px;
     font-weight: 500;
     font-size: 18px;
@@ -98,7 +97,7 @@ body{
     transform: translateY(-20px);
 }
 
-.card:hover .content .contentBx h3{
+.teamcard:hover .content .contentBx h3{
     opacity: 1;
     transform: translateY(0);
 }

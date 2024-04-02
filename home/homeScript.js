@@ -1,7 +1,7 @@
 let content = document.getElementById('content');
     window.addEventListener('scroll', () => {
     let value = window.scrollY;
-    content.style.marginTop =  (value * 0.5 + 150) + 'px';
+    content.style.marginTop =  (value * 0.5 + 200) + 'px';
     })
 
     function tileClicked(tileNumber) {
