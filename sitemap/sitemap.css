@@ -5,9 +5,11 @@
         }
 
         body{
+          margin-top: 100px;
           display: flex;
-          justify-content: center;
-          background-color: #000;
+          flex-direction: column;
+          align-items: center;
+          background-color: #022859;
         }
 
         /* Default style for the rectangle */
@@ -44,9 +46,27 @@
             }
           }
 
+          svg{
+            justify-content: center;
+          }
+
           h1{
-            font-size: 20px;
+            font-size: 30px;
             color: #fff;
+          }
+
+
+          .title{
+            text-align: center;
+          }
+
+          .svg{
+            text-align: center; 
+            background-color: white; 
+            max-width: fit-content;
+            height: 750px;
+            margin-bottom: 20px;
+            border-radius: 30px;
           }
 
           

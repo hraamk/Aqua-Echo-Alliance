@@ -11,9 +11,6 @@ body {
   overflow-x: hidden;
 }
 
-header {
-  display: none;
-}
 
 main {
   display: flex;
