@@ -6,6 +6,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const ratingInputs = document.querySelectorAll('input[name="rating"]');
     const previewDiv = document.getElementById('preview');
     const confirmationDiv = document.getElementById('confirmation');
+    const convYesInput = document.getElementById('yes-conv');
+    const convNoInput = document.getElementById('no-conv'); 
+
+    // Event listener for the "Yes" radio button
+    convYesInput.addEventListener('change', function() {
+        if (this.checked) {
+            commentInput.value = "I am satisfied with the website";
+        }
+    });
+
+    // Event listener for the "No" radio button
+    convNoInput.addEventListener('change', function() {
+        if (this.checked) {
+            commentInput.value = ""; // Clear the text area if "No" is checked
+        }
+    });
 
     feedbackForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -24,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
             isValid = false;
         }
         if (commentInput.value.trim() === '') {
-            displayErrorMessage('comment', 'Comment is required');
+            displayErrorMessage('comment', 'required field not filled');
             isValid = false;
         }
         let ratingValue = '';
@@ -33,28 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 ratingValue = input.value;
             }
         });
-
-        if (ratingValue === '') {
-            displayErrorMessage('rating', 'Please select a rating');
-            isValid = false;
-        }
-
-        // Check if the user found the website informative and easy to navigate through
-        const convYesInput = document.getElementById('yes-conv');
-        if (convYesInput && convYesInput.checked) {
-            // If yes, set a default value for the comment field
-            commentInput.value = "I am satisfied with the website";
-
-            // Remove error message for this question
-            const convErrorMessage = document.getElementById('conv-error');
-            if (convErrorMessage) {
-                convErrorMessage.textContent = ''; // Clear error message
-            }
-        } else {
-            // If the user didn't find the website informative, mark the form as invalid
-            isValid = false;
-        }
-
+        
         if (isValid) {
             // Store form data in sessionStorage
             sessionStorage.setItem('feedbackData', JSON.stringify({
