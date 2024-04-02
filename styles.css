@@ -78,16 +78,6 @@ header {
     
   } 
 
-  #tile1, #tile3{
-    background-color: #022859;
-  }
-
-  #tile2, #tile4{
-    background-color: #011C40;
-  }
-
-
-
 
   .description {
     width: 33.3%;
@@ -290,40 +280,41 @@ header {
     flex-direction: column;
     align-items: center;  /* Center content horizontally */
     justify-content: center; /* Center content vertically */
-    margin: 10% auto;
- 
+    margin:  auto;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    gap: 5vh; 
+    background-image: url('/home/BG1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  
   }
 
-  .tile{
+  .tile {
     display: flex;
     background-color: #F2F2F2;
-    padding: 20%;
-    height: 30vh;
-    width: 100%;
-    justify-content: space-around;
-
+    padding: 20px; /* Adjust padding as needed */
+    height: 50vh; /* Adjust height to fit content */
+    width: 60%; /* Adjust maximum width to maintain aspect ratio */
+    justify-content: space-between; /* Aligns items at the start and end, with equal space in between */
+    border-radius: 20px;
+    align-items: center; /* Vertically aligns items in the center */
+    gap: 6vh;
   }
-
-  .tilecontent{
-    color:black;
-    align-content: center;
-    max-width: 500px;
+  
+  .tilecontent {
+    width: calc(100% - 300px); /* Calculate width for content */
+    max-width: calc(100% - 300px); /* Adjust max-width for content */
+    color: black;
   }
-
+  
+  .tileimg {
+    flex-shrink: 0; /* Prevent image from shrinking */
+  }
+  
   /* Hover effect */
-.tile:hover {
-  transform: translateY(-5px); /* Lift the box */
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.tileimg{
-  justify-content: center;
-  align-content: center;
-}
-
-.links {
-  background-image: url('/home/BG1.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin:0;
-}
+  .tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
