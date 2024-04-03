@@ -238,7 +238,7 @@ header {
   /* Footer styles */
   footer {
     position: relative;
-    background-color: #011C40; /* Ocean blue */
+    background-color: #011C40; 
     width: 100%;
     color: #ffffff;
     padding: 10px 0;
