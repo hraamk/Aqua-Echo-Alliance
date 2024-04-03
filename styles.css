@@ -269,8 +269,9 @@ header {
   .tile {
     display: flex;
     background-color: #ffffff;
-    height: 50vh; /* Adjust height to fit content */
+    height: fit-content; /* Adjust height to fit content */
     width: 100%;
+    max-width: 700px;
     justify-content: space-between; /* Aligns items at the start and end, with equal space in between */
     align-items: center; /* Vertically aligns items in the center */
     margin: 2vh;
@@ -284,6 +285,8 @@ header {
     opacity: 0;
     transition: opacity 0.5s ease;
     padding: 5%;
+    
+    max-width: 700px;
   }
   .fade-in {
     opacity: 1;
@@ -294,10 +297,12 @@ header {
   
   .twocontent{
     display: flex;
+    flex-wrap: wrap;
   }
 
   .shop{
     display: flex;
+    flex-wrap: wrap;
     width: 88vw;
     border-radius: 30px;
     justify-content: space-around;
@@ -319,4 +324,21 @@ header {
 }
 .shop .col h1{
   font-size: 3rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+.tilecontent{
+  padding-top: 0px !important;
+  width: 100%;
+  text-align: center;
+}
+.tile{
+  flex-wrap: wrap;
+  margin: 30px;
+
+
+}
+  
 }
