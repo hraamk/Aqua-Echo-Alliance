@@ -34,7 +34,9 @@ h1 {
 .svg {
   display: flex;
   text-align: center; 
-  background-color: white; 
+  background-image: url(coral2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   height: fit-content;
   margin-bottom: 20px;
   border-radius: 30px;
