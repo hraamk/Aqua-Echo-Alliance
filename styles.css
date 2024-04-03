@@ -302,11 +302,11 @@ header {
     border-radius: 30px;
     justify-content: space-around;
     align-items: center;
+    background-color: #fff;
     padding: 5%;
     gap: 100px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    background: none;
   }
 
   .fade-in {
@@ -319,12 +319,4 @@ header {
 }
 .shop .col h1{
   font-size: 3rem;
-}
-
-.explorediv{
-  display: flex;
-  justify-content: center;
-  width: 95vw;
-  border-radius: 30px;
-  background-color: #fff;
 }
