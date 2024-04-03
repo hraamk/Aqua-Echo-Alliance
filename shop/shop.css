@@ -68,7 +68,7 @@ body {
 
 .product:hover {
     transform: scale(1.05);
-    border: 1px solid rgb(0, 125, 188); /* Scale up on hover to make it stand out */
+    border: 5px solid rgb(0, 125, 188); 
 }
 
 .product h2,
@@ -84,8 +84,8 @@ body {
 
 .product button {
     padding: 10px 20px;
-    background-color: #007bff; /* Blue button color */
-    color: #fff; /* White text color */
+    background-color: #007bff; 
+    color: #fff; 
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -93,12 +93,12 @@ body {
 }
 
 .product button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3; 
 }
 
 
 .basket {
-    flex: 0 0 20%; /* 20% width */
+    flex: 0 0 20%; 
     background-color: #f9f9f9; /* Light gray background */
     padding: 20px;
     border-radius: 10px;
@@ -133,7 +133,7 @@ body {
 
 .remove-item:hover {
     background-color: #ff3d00; /* Red background on hover */
-    color: #ffffff; /* White text color on hover */
+    color: #ffffff; 
 }
 
 #paybtn {
@@ -142,7 +142,7 @@ body {
     padding: 10px 20px;
     margin-top: 20px;
     font-size: 16px;
-    color: #fff; /* White text color */
+    color: #fff; 
     background-color: #007bff; /* Blue button color */
     border: none;
     border-radius: 5px;
