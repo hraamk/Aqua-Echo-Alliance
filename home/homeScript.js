@@ -14,10 +14,10 @@ function handleScroll() {
       }
   });
 
-  const shopContents = document.querySelectorAll('.shop');
-  shopContents.forEach(shop => {
-      if (isInViewport(shop)) {
-          shop.classList.add('fade-in');
+  const exploreContents = document.querySelectorAll('.explore');
+  exploreContents.forEach(explore => {
+      if (isInViewport(explore)) {
+          explore.classList.add('fade-in');
       }
   });
 }

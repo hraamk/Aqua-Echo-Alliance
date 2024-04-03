@@ -271,7 +271,7 @@ header {
     background-color: #ffffff;
     height: fit-content; /* Adjust height to fit content */
     width: 100%;
-    max-width: 700px;
+    max-width: 650px;
     justify-content: space-between; /* Aligns items at the start and end, with equal space in between */
     align-items: center; /* Vertically aligns items in the center */
     margin: 2vh;
@@ -300,16 +300,14 @@ header {
     flex-wrap: wrap;
   }
 
-  .shop{
+  .explore{
+    background: none;
     display: flex;
     flex-wrap: wrap;
-    width: 88vw;
     border-radius: 30px;
     justify-content: space-around;
     align-items: center;
-    background-color: #fff;
     padding: 5%;
-    gap: 100px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
   }
@@ -317,13 +315,19 @@ header {
   .fade-in {
     opacity: 1;
   }
-  .shop img {
-    width: 50%;
+  .explore img {
+    width: 40%;
     border-radius: 20px;
     height: auto; /* Maintain aspect ratio */
 }
-.shop .col h1{
+.explore .col h1{
   font-size: 3rem;
+}
+
+.explorediv{
+  background-color: #fff;
+  border-radius: 20px;
+  width: 92%;
 }
 
 
