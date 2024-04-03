@@ -106,11 +106,14 @@ body {
 
 .basket h2 {
     margin-top: 0;
+    padding: 10%;
+    text-align: center;
 }
 
 .basket ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 .basket li {
@@ -133,7 +136,7 @@ body {
     color: #ffffff; /* White text color on hover */
 }
 
-.proceed-to-checkout {
+#paybtn {
     display: block;
     width: 100%;
     padding: 10px 20px;
@@ -147,12 +150,20 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.proceed-to-checkout:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+#paybtn:hover{
+    background-color: #0056b3;
 }
 
-#foot{
-position: absolute;
-bottom: 0;
-background-color: #ddd;
+#total{
+    padding: 3%;
+    font-size: 1.3rem;
+}
+
+.payandtot{
+    background-color: rgb(247, 243, 239);
+    border-radius: 20px;
+    padding: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
