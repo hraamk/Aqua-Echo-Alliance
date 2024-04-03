@@ -238,7 +238,7 @@ header {
   /* Footer styles */
   footer {
     position: relative;
-    background-color: #011526; /* Ocean blue */
+    background-color: #011C40; /* Ocean blue */
     width: 100%;
     color: #ffffff;
     padding: 10px 0;
@@ -258,7 +258,7 @@ header {
     padding-top: 5vh;
     padding-bottom: 5vh;
     gap: 5vh; 
-    background-image: url('/home/BG1.jpg');
+    background-image: url('/home/homeBg.png');
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
@@ -308,14 +308,8 @@ header {
   }
   .shop img {
     width: 50%;
+    border-radius: 20px;
     height: auto; /* Maintain aspect ratio */
-}
-.shop button{
-  height: 10vh;
-  width: 20vw;
-  border-radius: 20px;
-  background-color: #0077cc;
-  color: #fff;
 }
 .shop .col h1{
   font-size: 3rem;

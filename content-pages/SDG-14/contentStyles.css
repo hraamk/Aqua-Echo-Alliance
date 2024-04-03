@@ -6,7 +6,6 @@
 body {
     background: rgb(255, 255, 255);
     overflow-x: hidden;
-    padding-top: 60px;
 }
 
 .parallex {
@@ -14,7 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(194, 234, 254);
+    background-color: rgb(43, 174, 240);
     /* height: calc(100vh - 30px);  */
     --aspect-height: calc(100vw / 2.13);
     --height-parallax: min(100vh, var(--aspect-height));
