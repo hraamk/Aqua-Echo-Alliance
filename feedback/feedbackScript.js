@@ -78,7 +78,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 rating: getSelectedRadioValue(ratingInputs),
                 recommend: getSelectedRadioValue(recommendInputs),
                 updates: updatesSelect.value,
-                comment: commentInput.value.trim()
+                comment: commentInput.value.trim(),
+
             };
             sessionStorage.setItem('feedbackData', JSON.stringify(feedbackData));
 
@@ -112,10 +113,8 @@ document.addEventListener("DOMContentLoaded", function() {
             errorMessage.textContent = '';
         });
     }
-
     function displayPreview(feedbackData) {
         previewDiv.textContent = ''; // Clear existing content
-        const informativeAndNavigable = feedbackData.conv === 'Yes' ? 'Yes' : 'No';
         if (feedbackData) {
             const {
                 name,
@@ -125,8 +124,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 rating,
                 recommend,
                 updates,
-                comment
+                comment,
+                conv
             } = feedbackData;
+            const informativeAndNavigable = conv === 'Yes' ? 'Yes' : 'No';
             previewDiv.innerHTML = `
                 <h2>Preview:</h2>
                 <p><strong>Name:</strong> ${name}</p>
@@ -141,13 +142,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 <button id="edit-button">Edit</button>
                 <button id="submit-button">Submit</button>
             `;
-
+    
             // Add event listener for edit button
             const editButton = document.getElementById('edit-button');
             editButton.addEventListener('click', function() {
                 previewDiv.textContent = ''; // Clear preview
             });
-
+    
             // Add event listener for submit button
             const submitButton = document.getElementById('submit-button');
             submitButton.addEventListener('click', function() {
@@ -155,4 +156,5 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
     }
+    
 });
