@@ -103,3 +103,7 @@ button:hover {
     font-weight: bold;
     color: green;
 }
+
+#preview{
+ line-height: 300%;
+}
