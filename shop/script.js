@@ -44,13 +44,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const expiryDate = document.getElementById('expiry-date').value.trim();
         const ccv = document.getElementById('ccv').value.trim();
 
-        // Simple validation (you can extend this as needed)
+
         if (name === '' || email === '' || contactNumber === '' || country === '' || state === '' || district === '' || postcode === '' || street === '' || cardholderName === '' || cardNumber === '' || expiryDate === '' || ccv === '') {
             alert('Please fill in all fields.');
             return;
         }
 
-        // Add your payment logic here
-        console.log('Processing payment...');
+
+        alert("your payment is completed")
+        window.location.href = 'shop.html';
     });
 });

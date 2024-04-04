@@ -14,12 +14,14 @@ body {
 
 main {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 
 section {
   margin-bottom: 40px;
   text-align: center;
+  display: flex;
 }
 
 
@@ -72,7 +74,7 @@ h2 {
 }
 
 #scroll {
-  font-size: 9em;
+  font-size: 5em;
   margin-top: 10%;
   color: #0077cc;
 }
@@ -80,7 +82,7 @@ h2 {
 #pollution-head,
 #raisinghead,
 #marine-head {
-  font-size: 7em;
+  font-size: 4em;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -119,10 +121,9 @@ h2 {
 }
 
 
-#feedback p{
-  font-size: 1.7em;
-  margin-bottom: 30px;
-  padding: 0% 20%;
+#feedback-content{
+  font-size: 1.5em;
+  padding: 5% 10%;
 }
 
 #feedback .join-button,
@@ -142,14 +143,6 @@ h2 {
 }
 
 
-/* Responsive Styles */
-@media screen and (max-width: 600px) {
-  header,
-  footer {
-    font-size: 16px;
-  }
-}
-
 
 /* backgrounds */
 
@@ -158,28 +151,6 @@ h2 {
 }
 
 
-/* images */
-
-#stock1 {
-  position: absolute;
-  z-index: -1;
-  right: 200px;
-  bottom: 0; 
-}
-
-#stock2 {
-  position: absolute;
-  z-index: -1;
-  bottom: -25%; 
-  transition: transform 0.3s ease;
-}
-#stock3 {
-  position: absolute;
-  z-index: -1;
-  bottom: -25%; 
-  right: 70%;
-  transition: transform 0.3s ease;
-}
 
 .slide{
   display: flex;
@@ -204,8 +175,27 @@ h2 {
     transform: translateY(-100%); /* Adjust the percentage for desired movement */
   }
 }
-#stock2:hover,
-#stock3:hover{
-  transform: translateY(-100px);
-  
+
+
+@media screen and (max-width:1000px) {
+  #introseccontent{
+    margin-top: 100px;
+  }
+
+
+  #introseccontent,
+  #marinecontent,
+  #pollutioncontent,
+  #raising-content,
+  #feedback-content {
+    height: 200vh;
+  }
+
+  .slide {
+    flex-direction: column; 
+  }
+
+  #whalepic {
+    width: 100%; /* Adjust image width for smaller screens */
+  }
 }

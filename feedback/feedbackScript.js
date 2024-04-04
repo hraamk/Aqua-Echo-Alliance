@@ -2,24 +2,28 @@ document.addEventListener("DOMContentLoaded", function() {
     const feedbackForm = document.getElementById('feedback-form');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
-    const commentInput = document.getElementById('improvement');
+    const visitInputs = document.querySelectorAll('input[name="visit"]');
+    const convYesInput = document.getElementById('yes-conv'); // Define convYesInput
+    const convNoInput = document.getElementById('no-conv');   // Define convNoInput
+    const improvementInput = document.getElementById('improvement');
     const ratingInputs = document.querySelectorAll('input[name="rating"]');
+    const recommendInputs = document.querySelectorAll('input[name="recommend"]');
+    const updatesSelect = document.getElementById('updates');
+    const commentInput = document.getElementById('comment');
     const previewDiv = document.getElementById('preview');
     const confirmationDiv = document.getElementById('confirmation');
-    const convYesInput = document.getElementById('yes-conv');
-    const convNoInput = document.getElementById('no-conv'); 
 
-    // Event listener for the "Yes" radio button
+    // Event listener for the "Yes" radio button for the question "Was this website informative and easy to navigate through?"
     convYesInput.addEventListener('change', function() {
         if (this.checked) {
-            commentInput.value = "I am satisfied with the website";
+            improvementInput.value = "I am satisfied with the website";
         }
     });
 
-    // Event listener for the "No" radio button
+    // Event listener for the "No" radio button for the question "Was this website informative and easy to navigate through?"
     convNoInput.addEventListener('change', function() {
         if (this.checked) {
-            commentInput.value = ""; // Clear the text area if "No" is checked
+            improvementInput.value = ""; // Clear the text area if "No" is checked
         }
     });
 
@@ -35,29 +39,49 @@ document.addEventListener("DOMContentLoaded", function() {
             displayErrorMessage('name', 'Name is required');
             isValid = false;
         }
-        if (emailInput.value.trim() !== '' && !isValidEmail(emailInput.value.trim())) {
+        if (emailInput.value.trim() === '') {
+            displayErrorMessage('email', 'Email is required');
+            isValid = false;
+        }
+        if (!isValidEmail(emailInput.value.trim())) {
             displayErrorMessage('email', 'Invalid email format');
             isValid = false;
         }
-        if (commentInput.value.trim() === '') {
-            displayErrorMessage('comment', 'required field not filled');
+        if (!isRadioChecked(visitInputs)) {
+            displayErrorMessage('visit', 'Please select an option');
             isValid = false;
         }
-        let ratingValue = '';
-        ratingInputs.forEach(input => {
-            if (input.checked) {
-                ratingValue = input.value;
-            }
-        });
-        
+        if (improvementInput.value.trim() === '') {
+            displayErrorMessage('improvement', 'Improvement suggestion is required');
+            isValid = false;
+        }
+        if (!isRadioChecked(ratingInputs)) {
+            displayErrorMessage('rating', 'Please select a rating');
+            isValid = false;
+        }
+        if (!isRadioChecked(recommendInputs)) {
+            displayErrorMessage('recommend', 'Please select an option');
+            isValid = false;
+        }
+        if (updatesSelect.value === '') {
+            displayErrorMessage('updates', 'Please select an option');
+            isValid = false;
+        }
+
         if (isValid) {
             // Store form data in sessionStorage
-            sessionStorage.setItem('feedbackData', JSON.stringify({
+            const feedbackData = {
                 name: nameInput.value.trim(),
                 email: emailInput.value.trim(),
-                rating: ratingValue,
+                visit: getSelectedRadioValue(visitInputs),
+                conv: getSelectedRadioValue(convYesInput, convNoInput), // Pass convYesInput and convNoInput
+                improvement: improvementInput.value.trim(),
+                rating: getSelectedRadioValue(ratingInputs),
+                recommend: getSelectedRadioValue(recommendInputs),
+                updates: updatesSelect.value,
                 comment: commentInput.value.trim()
-            }));
+            };
+            sessionStorage.setItem('feedbackData', JSON.stringify(feedbackData));
 
             // Display preview
             displayPreview();
@@ -65,9 +89,17 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function isValidEmail(email) {
-        // Simple email validation using regex
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
+    }
+
+    function isRadioChecked(inputs) {
+        return Array.from(inputs).some(input => input.checked);
+    }
+
+    function getSelectedRadioValue(inputs) {
+        const checkedInput = Array.from(inputs).find(input => input.checked);
+        return checkedInput ? checkedInput.value : '';
     }
 
     function displayErrorMessage(inputName, message) {
@@ -86,13 +118,28 @@ document.addEventListener("DOMContentLoaded", function() {
         previewDiv.textContent = ''; // Clear existing content
         const feedbackData = JSON.parse(sessionStorage.getItem('feedbackData'));
         if (feedbackData) {
-            const { name, email, rating, comment } = feedbackData;
+            const {
+                name,
+                email,
+                visit,
+                conv,
+                improvement,
+                rating,
+                recommend,
+                updates,
+                comment
+            } = feedbackData;
             previewDiv.innerHTML = `
                 <h2>Preview:</h2>
                 <p><strong>Name:</strong> ${name}</p>
                 <p><strong>Email:</strong> ${email}</p>
+                <p><strong>First time visiting:</strong> ${visit}</p>
+                <p><strong>Informative and easy to navigate:</strong> ${conv}</p>
+                <p><strong>Improvement suggestion:</strong> ${improvement}</p>
                 <p><strong>Rating:</strong> ${rating}</p>
-                <p><strong>Comment:</strong> ${comment}</p>
+                <p><strong>Recommendation:</strong> ${recommend}</p>
+                <p><strong>Receive updates:</strong> ${updates}</p>
+                <p><strong>Additional comments:</strong> ${comment}</p>
                 <button id="edit-button">Edit</button>
                 <button id="submit-button">Submit</button>
             `;
@@ -106,8 +153,6 @@ document.addEventListener("DOMContentLoaded", function() {
             // Add event listener for submit button
             const submitButton = document.getElementById('submit-button');
             submitButton.addEventListener('click', function() {
-                // Here you can implement sending the form data via email
-                // For demo purposes, we'll display a confirmation message
                 confirmationDiv.textContent = 'Feedback submitted successfully!';
             });
         }

@@ -124,3 +124,17 @@ input[type="text"]:focus {
     outline: none;
     border-color: #007bff;
 }
+
+#payment_btn button{
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    width: 7vh;
+    padding: 20%;
+    margin: 10%;
+}
+
+#payment_btn button:hover{
+    background-color: darkblue;
+}

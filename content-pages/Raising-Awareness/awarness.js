@@ -8,8 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "marine-biodiversity"
   );
   var pollutionSection = document.getElementById("pollution");
-  var raisingawarenesSection = document.getElementById("raising-awarenes");
-  var feedbackSection = document.getElementById("feedback");
+
 
   //headers
   var h1 = document.getElementById("scroll");
@@ -32,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     // Smoothly transition font size based on visibility percentage
-    h1.style.fontSize = 9 - visibilityPercentage * 12 + "em"; // Transition from 9em to 5em based on visibility
+    h1.style.fontSize = 5 - visibilityPercentage * 12 + "em"; 
 
     // Smoothly transition border radius based on visibility percentage
     var borderRadius = 100 + visibilityPercentage * 400; // Transition from 50px to 0px based on visibility
@@ -58,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var scrollProgress = 1 - biodiversityPosition / window.innerHeight;
 
     // Calculate the font size dynamically
-    var fontSize = 3 + scrollProgress * 5 + "em";
+    var fontSize = 1 + scrollProgress * 3 + "em";
 
     // Apply the linear gradient background to the text only
     marinehead.style.background = `linear-gradient(to bottom, black ${
