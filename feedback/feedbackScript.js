@@ -47,28 +47,27 @@ document.addEventListener("DOMContentLoaded", function() {
             displayErrorMessage('email', 'Invalid email format');
             isValid = false;
         }
-        if (!isRadioChecked(visitInputs)) {
-            displayErrorMessage('visit', 'Please select an option');
-            isValid = false;
-        }
+
         if (improvementInput.value.trim() === '') {
             displayErrorMessage('improvement', 'Improvement suggestion is required');
-            isValid = false;
-        }
-        if (!isRadioChecked(ratingInputs)) {
-            displayErrorMessage('rating', 'Please select a rating');
-            isValid = false;
-        }
-        if (!isRadioChecked(recommendInputs)) {
-            displayErrorMessage('recommend', 'Please select an option');
-            isValid = false;
-        }
-        if (updatesSelect.value === '') {
-            displayErrorMessage('updates', 'Please select an option');
-            isValid = false;
         }
 
+
+        if (updatesSelect.value === '') {
+            displayErrorMessage('updates-error', 'Please select an option');
+            isValid = false;
+        }
+        // Check if any field is empty
+        const inputs = [nameInput, emailInput, improvementInput, updatesSelect];
+        inputs.forEach(input => {
+            if (input.value.trim() === '') {
+                displayErrorMessage(input.id, `${input.placeholder} is required`);
+                isValid = false;
+            }
+        });
+
         if (isValid) {
+            
             // Store form data in sessionStorage
             const feedbackData = {
                 name: nameInput.value.trim(),
@@ -84,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
             sessionStorage.setItem('feedbackData', JSON.stringify(feedbackData));
 
             // Display preview
-            displayPreview();
+            displayPreview(feedbackData);
         }
     });
 
@@ -102,8 +101,8 @@ document.addEventListener("DOMContentLoaded", function() {
         return checkedInput ? checkedInput.value : '';
     }
 
-    function displayErrorMessage(inputName, message) {
-        const errorMessageElement = document.getElementById(`${inputName}-error`);
+    function displayErrorMessage(inputId, message) {
+        const errorMessageElement = document.getElementById(`${inputId}-error`);
         errorMessageElement.textContent = message;
     }
 
@@ -114,15 +113,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    function displayPreview() {
+    function displayPreview(feedbackData) {
         previewDiv.textContent = ''; // Clear existing content
-        const feedbackData = JSON.parse(sessionStorage.getItem('feedbackData'));
+        const informativeAndNavigable = feedbackData.conv === 'Yes' ? 'Yes' : 'No';
         if (feedbackData) {
             const {
                 name,
                 email,
                 visit,
-                conv,
                 improvement,
                 rating,
                 recommend,
@@ -134,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <p><strong>Name:</strong> ${name}</p>
                 <p><strong>Email:</strong> ${email}</p>
                 <p><strong>First time visiting:</strong> ${visit}</p>
-                <p><strong>Informative and easy to navigate:</strong> ${conv}</p>
+                <p><strong>Informative and easy to navigate:</strong> ${informativeAndNavigable}</p>
                 <p><strong>Improvement suggestion:</strong> ${improvement}</p>
                 <p><strong>Rating:</strong> ${rating}</p>
                 <p><strong>Recommendation:</strong> ${recommend}</p>
