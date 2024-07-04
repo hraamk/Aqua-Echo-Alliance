@@ -1,2 +1,2 @@
-# Web-CW
-Web Design and Development Coursework 
+Aqua Echo Alliance
+Website designed to promote SDG 14 Life Below Water.
